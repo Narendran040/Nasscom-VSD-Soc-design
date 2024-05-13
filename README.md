@@ -2,8 +2,7 @@
 
 # Day one
 
-<Task1>
- <Task1y> Task1 </Task1>
-	
-Installed all required tools.
-</Task1>
+<details>
+	<task>Open source Eda ,Open lane ,SKY130PDK
+	</task>
+</details>
