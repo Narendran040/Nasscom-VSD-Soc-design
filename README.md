@@ -2,6 +2,6 @@
 
 # Day one
 <details>
- <summary> Task1 </summary>
-Open-source EDA, Open Lane, SKY130PDK
+ <summary> Inception of Open source EDA, Open Lane, SKY 130 PDK </summary>
+
 </details>
