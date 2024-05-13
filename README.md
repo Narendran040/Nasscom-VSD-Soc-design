@@ -3,4 +3,4 @@
 # Day one
 
 <Task 1>Open source EDA,Open Lane,SKY130 PDK</Task 1>
-</details>
+</Task 1>
