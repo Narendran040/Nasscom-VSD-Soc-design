@@ -2,7 +2,7 @@
 
 # Day one
 <details>
- <summary> Summary </summary>
+ <summary> Task1 </summary>
 	
 Installed all required tools.
 </details>
