@@ -3,6 +3,5 @@
 # Day one
 <details>
  <summary> Task1 </summary>
-	
-Installed all required tools.
+Open-source EDA, Open Lane, SKY130PDK
 </details>
