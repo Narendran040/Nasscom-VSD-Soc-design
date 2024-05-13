@@ -2,6 +2,6 @@
 
 # Day one
 
-<details>
+<Task>
 <task1>Task1</task1>
 </details>
