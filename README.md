@@ -32,6 +32,11 @@ https://users.sussex.ac.uk/~mfb21/compilers/slides/11-handout.pdf
 
 ![rtl2gds](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/74dcce8e-1fd0-40a2-9535-cb254c1b72f9)
 
+# OpenLane ASIC flow
+
+![asic flow](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/6121eb04-ac55-498b-b9d1-d44ea569919a)
+
+
 
 
 </details>
