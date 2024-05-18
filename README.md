@@ -67,6 +67,39 @@ https://users.sussex.ac.uk/~mfb21/compilers/slides/11-handout.pdf
 
  ![image](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/6ce45bab-2fd5-44ee-9c8f-088898dbc98e)
 
+ > To view the floorplan, Magic is invoked after moving to the results/floorplan directory:
+ ```
+ magic -T /home/narendran/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.max.lef def read picorv32.def &
+ ```
+
+![Screenshot 2024-05-18 210345](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/261e5630-a89b-4951-8f43-4a04d74faaf3)
+
+ </details>
+<details>
+
+<summary>Placement</summary>
+
+# Placement run on OpenLANE & view in Magic
+```
+run_placement
+```
+
+
+![rp](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/8505d9da-2085-4548-879c-f925faab28c4)
+
+
+
+>To view the placement, Magic is invoked after moving to the results/placement directory:
+
+```
+magic -T /home/narendran/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.max.lef def read picorv32.def &
+```
+
+
+![pl2](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/f7f3d78c-792e-47f7-a0b1-4a3929b89476)
+
+
+</details>
  
 
 </details>
