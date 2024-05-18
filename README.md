@@ -36,7 +36,16 @@ https://users.sussex.ac.uk/~mfb21/compilers/slides/11-handout.pdf
 
 ![asic flow](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/6121eb04-ac55-498b-b9d1-d44ea569919a)
 
+# Invoking Openlane and Design Preparation
 
 
+![sys](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/16a0bb2b-fb4e-495f-a381-f2a5c7d2ef8a)
 
+
+</details>
+
+# Day Two
+<details>
+ <summary>Floorplan</summary>
+ 
 </details>
