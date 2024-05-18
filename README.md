@@ -47,5 +47,26 @@ https://users.sussex.ac.uk/~mfb21/compilers/slides/11-handout.pdf
 # Day Two
 <details>
  <summary>Floorplan</summary>
+
+# Height and Width of core and die
+
+![flll](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/97004977-3bbe-44bd-ad2c-9c8ac3136935)
+
  
+ 
+```
+ .Utilization Factor = Area occupied by netlist / Total area of the core
+ .Aspect ratio = Height / Width
+```
+
+> To run the picorv32a floorplan in openLANE:
+
+```
+ run_floorplan
+ ```
+
+ ![image](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/6ce45bab-2fd5-44ee-9c8f-088898dbc98e)
+
+ 
+
 </details>
