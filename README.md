@@ -50,6 +50,7 @@ https://users.sussex.ac.uk/~mfb21/compilers/slides/11-handout.pdf
 
 # Height and Width of core and die
 
+
 ![flll](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/97004977-3bbe-44bd-ad2c-9c8ac3136935)
 
  
