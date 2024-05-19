@@ -55,8 +55,15 @@ https://users.sussex.ac.uk/~mfb21/compilers/slides/11-handout.pdf
  
  
 ```
- .Utilization Factor = Area occupied by netlist / Total area of the core
- .Aspect ratio = Height / Width
+ Utilisation Factor =  Area occupied by netlist
+                     __________________________
+                        Total area of core
+```
+
+```
+Aspect Ratio =  Height
+               ________
+                Width
 ```
 
 > To run the picorv32a floorplan in openLANE:
