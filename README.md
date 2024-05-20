@@ -175,5 +175,21 @@ Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
 
  ![16 mp](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/841eec8d-12b8-4c12-bd3f-314421d7642e)
 
+ # Inverter Standard cell Layout
+ The inverter magic file is sourced from vsdstdcelldesign by cloning it within the openlane_working_dir/open lane directory as follows:
+ ```
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+```
+> Invoking sky_inv.mag using Magic
+
+```
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+![Cmos](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/5c61f265-58fa-40bc-91ef-9d3ad9379cc7)
+
+![cmos 2](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/aab01056-6e53-4ee4-9f95-575ea6ad5bee)
+
+
  </details>
 </details>
