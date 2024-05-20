@@ -190,6 +190,16 @@ magic -T sky130A.tech sky130_inv.mag &
 
 ![cmos 2](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/aab01056-6e53-4ee4-9f95-575ea6ad5bee)
 
+# Spice extraction
+
+```
+extract all
+ext2spice cthresh 0 rethresh 
+ext2spice
+```
+![sp](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/23ab1a2f-23c9-486e-bd2b-500aa142e819)
+
+
 
  </details>
 </details>
