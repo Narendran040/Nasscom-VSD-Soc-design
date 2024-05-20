@@ -48,6 +48,7 @@ https://users.sussex.ac.uk/~mfb21/compilers/slides/11-handout.pdf
 make mount
 ./flow.tcl -interactive
 package require openlane 0.9
+prep -design picorv32
 ```
 
 ![sys](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/16a0bb2b-fb4e-495f-a381-f2a5c7d2ef8a)
