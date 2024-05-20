@@ -1,6 +1,10 @@
 # Nasscom-VSD-Soc-design
+# Open source EDA tools 
+https://github.com/kunalg123/vsdflow.git
 # OpenLane
 https://github.com/The-OpenROAD-Project/OpenLane.git
+# Skywater 130 PDK
+https://github.com/RTimothyEdwards/open_pdks.git
 
 # Day one
 <details>
@@ -115,9 +119,9 @@ magic -T /home/narendran/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef 
 ![fll2](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/8ebe303f-1750-4910-aa27-93cff1ff9b8d)
 
 # Standard Cell Design Flow
-1. Inputs: PDKs, DRC & LVS rules, SPICE models, libraries, user-defined specifications.
+1. Inputs: PDKs, DRC & LVS rules, SPICE models, libraries, and user-defined specifications.
 2. Design steps: Circuit design, Layout design (Art of layout Euler's path and stick diagram), Extraction of parasitics, Characterization (timing, noise, power).
-3. Outputs: CDL (circuit description language), LEF, GDSII, extracted SPICE netlist (.cir), timing, noise and power .lib files
+3. Outputs: CDL (circuit description language), LEF, GDSII, extracted SPICE netlist (.cir), timing, noise, and power .lib files
 
 # Timing Parameter Definitions
 
@@ -141,6 +145,29 @@ Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
 ```
 
 </details>
- 
 
+ # Day Three
+ <details>
+ <summary>Design library cell</summary>
+ 
+  # 16 Mask CMOS Fabrication
+
+![16 mask](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/9c0cf9f7-ea5d-4d4f-9d5e-3a5d90593253)
+
+
+  
+> The 16-mask CMOS process consists of the following steps:
+
+1. Selection of substrate: Secting the body/substrate material.
+2. Creating active region for transistors: Isolation between active region pockets by SiO2 and Si3N4 deposition followed by photolithography and etching.
+3. N-well and P-well formation: Ion implantation by Boron for P-well and by Phosphorous for N-well formation.
+4. Formation of gate terminal: NMOS and PMOS gates formed by photolithography techniques.
+5. LDD (lightly doped drain) formation: LDD formed to prevent the hot electron effect.
+6. Source & drain formation: Screen oxide was added to avoid channeling during implants followed by Arsenic implantation and annealing.
+7. Local interconnect formation: Removal of screen oxide by HF etching. Deposition of Ti for low-resistant contacts.
+8. Higher level metal formation: CMP for planarization followed by TiN and Tungsten deposition. Top SiN layer for chip protection.
+
+ ![16 mp](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/841eec8d-12b8-4c12-bd3f-314421d7642e)
+
+ </details>
 </details>
