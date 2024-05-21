@@ -170,7 +170,7 @@ Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
 4. Formation of gate terminal: NMOS and PMOS gates formed by photolithography techniques.
 5. LDD (lightly doped drain) formation: LDD formed to prevent the hot electron effect.
 6. Source & drain formation: Screen oxide was added to avoid channeling during implants followed by Arsenic implantation and annealing.
-7. Local interconnect formation: Removal of screen oxide by HF etching. Deposition of Ti for low-resistant contacts.
+7. Local interconnect formation: Removal of screen oxide by HF etching—deposition of Ti for low-resistant contacts.
 8. Higher level metal formation: CMP for planarization followed by TiN and Tungsten deposition. Top SiN layer for chip protection.
 
  ![16 mp](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/841eec8d-12b8-4c12-bd3f-314421d7642e)
@@ -198,6 +198,47 @@ ext2spice cthresh 0 rethresh
 ext2spice
 ```
 ![sp](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/23ab1a2f-23c9-486e-bd2b-500aa142e819)
+
+
+
+ </details>
+
+ # Day Four
+ 
+ <details>
+ <summary>Timing Analysis & CTS</summary>
+ 
+  A requirement for ports as specified in tracks.info is that they should be at the intersection of horizontal and vertical tracks. The CMOS Inverter ports A and Y are on the li1 layer. It needs to be ensured that they're on the intersection of horizontal and vertical tracks. We access the tracks.info 
+  
+  ```
+  vim tracks.info
+  ```
+
+  ![vim](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/42420742-084e-4fc6-921f-e8eed7e5b8aa)
+
+  > Grid spacing using Magic
+
+
+  To ensure that ports lie on the intersection point, the grid spacing in Magic (tkcon) must be changed to the li1 X and li1 Y values. Convergence of grid and tracks can be achieved using the following command:
+  
+  ```
+  grid 0.46um 0.34um 0.23um 0.17um
+  ```
+
+![Screenshot 2024-05-21 201420](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/53c130bd-1b86-412f-ab3d-7e8fa47429c3)
+
+> Create port definition
+
+In Magic Layout window, first source the .mag file for the design . Then Edit >> Text which opens up a dialogue box.
+
+
+![D4 1](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/4e927615-1770-4ad6-b4a2-1c822deab5be)
+
+> LEF extraction can be carried out in tkcon:
+
+
+![D4 3](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/a67cdd27-f8e0-4a43-a591-b353b41f8eb1)
+
 
 
 
