@@ -239,6 +239,16 @@ In Magic Layout window, first source the .mag file for the design . Then Edit >>
 
 ![D4 3](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/a67cdd27-f8e0-4a43-a591-b353b41f8eb1)
 
+> Integrate the standard cell in the OpenLANE flow
+
+```
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32 -tag RUN_2024.05.18_15.54.24 -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+run_synthesis
+```
 
 
 
