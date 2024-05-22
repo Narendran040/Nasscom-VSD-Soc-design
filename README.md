@@ -229,7 +229,7 @@ ext2spice
 
 > Create port definition
 
-In Magic Layout window, first source the .mag file for the design . Then Edit >> Text which opens up a dialogue box.
+In the Magic Layout window, first source the .mag file for the design . Then Edit >> Text which opens up a dialogue box.
 
 
 ![D4 1](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/4e927615-1770-4ad6-b4a2-1c822deab5be)
@@ -271,6 +271,17 @@ run_synthesis
  <details>
   <summary>RTL2GDS</summary>
 
+  # Power Distribution Network generation
+  Power Distribution Network generation is not a part of the floorplan run in OpenLANE. PDN must be generated after CTS and post-CTS STA analyses
+  
+   ```
+  gen_pdn
+  ```
+
+
+![gen_pdn](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/aae3332e-ebef-42ea-ba91-f704fa866ee3)
+
+# Routing
 
 
    
