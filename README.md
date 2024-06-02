@@ -7,10 +7,8 @@ https://github.com/The-OpenROAD-Project/OpenLane.git
 https://github.com/RTimothyEdwards/open_pdks.git
 
 # Day one
-<details>
- <summary> Inception of Open source EDA, Open Lane, SKY 130 PDK </summary>
 
- 
+
  # Arduino Uno
  
 ![Screenshot 2024-05-13 223726](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/b44b49d0-d6d3-4b93-a380-5ee00caedcc5)
@@ -54,11 +52,10 @@ prep -design picorv32
 ![sys](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/16a0bb2b-fb4e-495f-a381-f2a5c7d2ef8a)
 
 
-</details>
+
 
 # Day Two
-<details>
- <summary>Floorplan</summary>
+
 
 # Height and Width of core and die
 
@@ -94,10 +91,7 @@ Aspect Ratio =  Height
 
 ![Screenshot 2024-05-18 210345](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/261e5630-a89b-4951-8f43-4a04d74faaf3)
 
- </details>
-<details>
-
-<summary>Placement</summary>
+ 
 
 # Placement run on OpenLANE & view in Magic
 ```
@@ -150,11 +144,10 @@ Fall transition time: time(slew_high_fall_thr) - time(slew_low_fall_thr)
 Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
 ```
 
-</details>
+
 
  # Day Three
- <details>
- <summary>Design library cell</summary>
+ 
  
   # 16 Mask CMOS Fabrication
 
@@ -201,12 +194,11 @@ ext2spice
 
 
 
- </details>
+
 
  # Day Four
  
- <details>
- <summary>Timing Analysis & CTS</summary>
+
  
   A requirement for ports as specified in tracks.info is that they should be at the intersection of horizontal and vertical tracks. The CMOS Inverter ports A and Y are on the li1 layer. It needs to be ensured that they're on the intersection of horizontal and vertical tracks. We access the tracks.info 
   
@@ -264,12 +256,11 @@ run_synthesis
 
 
 
- </details>
+
 
  # Day Five 
 
- <details>
-  <summary>RTL2GDS</summary>
+
 
   # Power Distribution Network generation
   Power Distribution Network generation is not a part of the floorplan run in OpenLANE. PDN must be generated after CTS and post-CTS STA analyses
