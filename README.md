@@ -46,8 +46,14 @@ The die is a small, flat silicon containing the integrated circuit. It is sliced
 ![Screenshot 2024-09-06 233032](https://github.com/user-attachments/assets/1d624c52-bc17-45b1-a26d-5ceec1eb7d2f)
 
 
+>MACROS and FOUNDRY IP'S
 
-![Screenshot 2024-05-13 224428](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/665454e8-a7dc-414f-b957-2b2d2c083e8f)
+ Macros-Macros are pre-designed functional blocks used for various components like processor cores, memory, peripherals, interconnects, and memory controllers. They simplify and speed up the design process, ensuring efficient and reliable system integration.
+
+Foundry IP's-Foundry IPs are pre-designed, verified circuit modules provided by semiconductor foundries. They include standard cells, analog components, and mixed-signal blocks, optimized for specific manufacturing processes. Foundry IPs help streamline IC design by offering proven, process-compatible solutions, improving design efficiency and reliability.
+
+
+![Screenshot 2024-09-06 234230](https://github.com/user-attachments/assets/deb4fd36-0924-4698-9508-98c58f31391f)
 
 
  Introduction to RISC-V
