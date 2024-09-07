@@ -90,12 +90,6 @@ ISA: ISA is known as "Instruction Set Architecture".It is merely a means of inte
    - The final destination of the translated code is the physical hardware, which may consist of complex structures like chips (represented in the diagram with Dout1, Dout2, etc.).
    - The binary instructions from the software are directly executed by the hardware to carry out the intended tasks, whether it’s computation, I/O operations, or other low-level functions.
 
-### Flow:
-   - **From the user’s perspective**: You use **Application Software**.
-   - **System software** (the OS) manages the hardware and the applications.
-   - **Compilers and assemblers** are used to transform high-level programming into a form the hardware can execute.
-   - Ultimately, the **hardware** executes the instructions from the software.
-
 
 ![Screenshot 2024-09-07 114748](https://github.com/user-attachments/assets/4037f33e-c873-438b-8047-ef518c349af7)
 
@@ -106,6 +100,8 @@ ISA: ISA is known as "Instruction Set Architecture".It is merely a means of inte
 ![Screenshot 2024-09-07 120723](https://github.com/user-attachments/assets/a00f1784-660e-4380-87f0-9b953aedb67e)
 
 
+![Screenshot 2024-09-07 122001](https://github.com/user-attachments/assets/749b64ef-4f15-4178-81f6-ba1ed6882955)
+
 
 
 
@@ -113,13 +109,69 @@ ISA: ISA is known as "Instruction Set Architecture".It is merely a means of inte
 
 ![asic](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/ad469a48-3080-483d-9aa5-18ad3aa4497c)
 
+
+
+### Key Components:
+
+1. **ASIC (Application-Specific Integrated Circuit):**
+   - The center of the design process, an ASIC is a customized chip designed for a specific application rather than general-purpose computing. For example, ASICs are used in devices like smartphones, data centers, or network equipment.
+
+2. **EDA Tools (Electronic Design Automation):**
+   - **EDA Tools** are software used to automate the design, verification, and simulation of ICs. 
+   - Examples in this diagram: **QFlow**, **OpenROAD**, and **OpenLANE**. These are all open-source tools for different stages of the ASIC design process, such as physical design, placement, routing, and optimization.
+   - These tools help engineers move from a high-level circuit design to the detailed geometric layout that defines how transistors and other components are placed on a chip.
+
+3. **PDK (Process Design Kit) Data:**
+   - **PDK Data** provides the essential process-specific information that is necessary to fabricate an ASIC. It includes data about the materials, processes, and rules that govern how the physical structure of the IC is built.
+   - This diagram references an **open-source PDK** from **Google** and **SkyWater Technology**, specifically for the **130nm technology node**. The open-source PDK initiative allows designers to experiment and build chips without proprietary licensing barriers.
+
+4. **RTL Designs (Register Transfer Level Designs):**
+   - **RTL Designs** describe the behavior and structure of digital circuits in terms of the flow of signals between registers and the logical operations performed on those signals. 
+   - Open-source repositories like **librecores.org**, **opencores.org**, and **github.com** host a variety of RTL designs, which designers can use as starting points or reference designs for their own projects.
+
+
+
+
 # RTL2GDS flow
 
 ![rtl2gds](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/74dcce8e-1fd0-40a2-9535-cb254c1b72f9)
 
+1. **RTL (Register Transfer Level):**
+   - The initial design description in terms of data flow and operations (behavior of the circuit), written in hardware description languages (HDL) like Verilog or VHDL.
+
+2. **PDK (Process Design Kit):**
+   - Contains process-specific rules and data for the chip fabrication technology being used. It guides the design in terms of physical parameters like transistor sizes, layers, and routing rules.
+
+3. **Flow Stages:**
+
+   - **Synthesis (Synth):**
+     - The process of converting the high-level RTL code into a **gate-level netlist** (logic gates, flip-flops). This represents the logical structure of the circuit.
+   
+   - **Floor Planning + Power Planning (FP + PP):**
+     - Determines the layout of major functional blocks on the chip and designs the power distribution network to ensure that all parts of the chip receive power efficiently.
+   
+   - **Placement (Place):**
+     - In this stage, the synthesized logic gates are physically placed on the chip according to the floor plan, respecting physical design rules.
+
+   - **Clock Tree Synthesis (CTS):**
+     - The process of designing a **clock tree** that ensures the clock signal reaches all sequential elements (like flip-flops) with minimal skew, ensuring synchronized operations across the chip.
+
+   - **Routing (Route):**
+     - Connects the placed cells with actual metal wires according to the design rules provided by the PDK. This step creates the physical connections (nets) between different components on the chip.
+
+   - **Sign Off:**
+     - This is the final stage where the design is verified against all requirements (timing, power, and design rule checks). Once verified, it is ready for fabrication, generating the final **GDSII** file (Graphical Database System II format).
+
+
 # OpenLane ASIC flow
 
 ![asic flow](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/6121eb04-ac55-498b-b9d1-d44ea569919a)
+
+
+
+
+
+
 
 # Invoking Openlane and Design Preparation
 
