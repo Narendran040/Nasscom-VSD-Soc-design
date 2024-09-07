@@ -97,6 +97,14 @@ ISA: ISA is known as "Instruction Set Architecture".It is merely a means of inte
    - Ultimately, the **hardware** executes the instructions from the software.
 
 
+![Screenshot 2024-09-07 114748](https://github.com/user-attachments/assets/4037f33e-c873-438b-8047-ef518c349af7)
+
+
+![Screenshot 2024-09-07 120414](https://github.com/user-attachments/assets/2b69ac44-7e18-403d-9a14-bee21444ee1f)
+
+
+![Screenshot 2024-09-07 120723](https://github.com/user-attachments/assets/a00f1784-660e-4380-87f0-9b953aedb67e)
+
 
 
 
