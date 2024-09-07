@@ -67,6 +67,38 @@ https://users.sussex.ac.uk/~mfb21/compilers/slides/11-handout.pdf
 
 ISA: ISA is known as "Instruction Set Architecture".It is merely a means of interacting with the computer. Generally speaking, we use coding languages like C, Java, and others to write programs that the system must perform, but machines cannot comprehend these languages. Here's when ISA enters the picture. The written codes will be translated from assembly language to binary, or machine-comprehensible language, using ISA. The RISC V ISA is the most recent ISA to be published, and it serves this purpose.
 
+![Screenshot 2024-09-07 114021](https://github.com/user-attachments/assets/dd436524-4767-4d40-984e-d6264e4985d3)
+
+
+### 1. **Application Software or Apps:**
+   - **Examples:** Mozilla Firefox, Acrobat Reader DC, Oracle VM VirtualBox, Microsoft Office (Word, PowerPoint, Excel).
+   - These are end-user programs designed for specific tasks like browsing the web, reading PDFs, or creating documents and presentations. They rely on system software to interact with hardware.
+
+### 2. **System Software:**
+   - **Operating System (OS):** Windows, macOS, Linux.
+   - The OS handles **I/O operations**, **memory allocation**, and **low-level system functions** like managing hardware resources.
+   - The OS also runs software like compilers and assemblers to execute programs written in high-level languages (like C, C++, VB, Java).
+
+### 3. **Compiler:**
+   - The compiler translates high-level programming languages (C, C++, VB, Java) into machine-level instructions (Instr1, Instr2, ...). This is typically done by converting the code into an intermediate file, such as a **.exe file** in the case of Windows.
+
+### 4. **Assembler:**
+   - The assembler converts these instructions into binary machine code, represented as 1s and 0s (e.g., **1010001110101**).
+   - This binary code is what the hardware understands and uses to perform operations.
+
+### 5. **Hardware:**
+   - The final destination of the translated code is the physical hardware, which may consist of complex structures like chips (represented in the diagram with Dout1, Dout2, etc.).
+   - The binary instructions from the software are directly executed by the hardware to carry out the intended tasks, whether it’s computation, I/O operations, or other low-level functions.
+
+### Flow:
+   - **From the user’s perspective**: You use **Application Software**.
+   - **System software** (the OS) manages the hardware and the applications.
+   - **Compilers and assemblers** are used to transform high-level programming into a form the hardware can execute.
+   - Ultimately, the **hardware** executes the instructions from the software.
+
+
+
+
 
 
  # Open-source digital ASIC design
