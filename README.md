@@ -7,6 +7,12 @@ https://github.com/The-OpenROAD-Project/OpenLane.git
 https://github.com/RTimothyEdwards/open_pdks.git
 
 # Day one
+# Theory
+<details>
+  <summary>
+RTL2GDS
+  </summary>
+ 
 ## RTL to GDS: From Code to Silicon
 
 The RTL to GDS flow is a crucial process in the semiconductor industry, transforming a high-level digital design written at the Register-Transfer Level (RTL) into a layout format (GDSII) that can be used for chip manufacturing. This flow ensures that a design, described through hardware description languages like Verilog or VHDL, is accurately converted into a physical layout that meets performance, area, and power requirements. It involves multiple stages of synthesis, verification, and physical design, culminating in generating the GDSII file, which is essential for fabricating integrated circuits.
@@ -210,22 +216,14 @@ Static Timing Analysis (STA) is a method used to verify the timing of a digital 
 
 ![asic flow](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/6121eb04-ac55-498b-b9d1-d44ea569919a)
 
+</details>
+
+
+### Practical Section's
 
 
 
 
-
-
-# Invoking Openlane and Design Preparation
-
-```
-make mount
-./flow.tcl -interactive
-package require openlane 0.9
-prep -design picorv32
-```
-
-![sys](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/16a0bb2b-fb4e-495f-a381-f2a5c7d2ef8a)
 
 
 
