@@ -189,8 +189,21 @@ ISA: ISA is known as "Instruction Set Architecture".It is merely a means of inte
 ![Screenshot 2024-09-07 172144](https://github.com/user-attachments/assets/9642481b-880d-4524-96f4-7173be751062)
 
 
+![Screenshot 2024-09-07 172546](https://github.com/user-attachments/assets/bfcfbb9e-c02c-488d-96b1-081354fd6547)
+
+
    - **Sign Off:**
      - This is the final stage where the design is verified against all requirements (timing, power, and design rule checks). Once verified, it is ready for fabrication, generating the final **GDSII** file (Graphical Database System II format).
+
+> Physical verification 
+
+Design Rule Check (DRC): Verifies that the layout follows the foundry's manufacturing rules, such as minimum feature sizes and spacing between components. This ensures the layout is manufacturable.
+
+Layout Versus Schematic (LVS): Compares the layout's extracted netlist with the schematic to ensure that the physical layout matches the intended electrical design, verifying connectivity and device parameters.
+
+>Timing verification
+
+Static Timing Analysis (STA) is a method used to verify the timing of a digital circuit without simulation. It analyzes signal propagation through different paths to ensure the circuit meets its timing requirements.
 
 
 # OpenLane ASIC flow
