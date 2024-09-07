@@ -111,8 +111,6 @@ ISA: ISA is known as "Instruction Set Architecture".It is merely a means of inte
 
 
 
-### Key Components:
-
 1. **ASIC (Application-Specific Integrated Circuit):**
    - The center of the design process, an ASIC is a customized chip designed for a specific application rather than general-purpose computing. For example, ASICs are used in devices like smartphones, data centers, or network equipment.
 
@@ -127,7 +125,7 @@ ISA: ISA is known as "Instruction Set Architecture".It is merely a means of inte
 
 4. **RTL Designs (Register Transfer Level Designs):**
    - **RTL Designs** describe the behavior and structure of digital circuits in terms of the flow of signals between registers and the logical operations performed on those signals. 
-   - Open-source repositories like **librecores.org**, **opencores.org**, and **github.com** host a variety of RTL designs, which designers can use as starting points or reference designs for their own projects.
+   - Open-source repositories like **librecores.org**, **opencores.org**, and **github.com** host a variety of RTL designs, which designers can use as starting points or reference designs for their projects.
 
 
 
@@ -136,8 +134,11 @@ ISA: ISA is known as "Instruction Set Architecture".It is merely a means of inte
 
 ![rtl2gds](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/74dcce8e-1fd0-40a2-9535-cb254c1b72f9)
 
+
+
 1. **RTL (Register Transfer Level):**
    - The initial design description in terms of data flow and operations (behavior of the circuit), written in hardware description languages (HDL) like Verilog or VHDL.
+  
 
 2. **PDK (Process Design Kit):**
    - Contains process-specific rules and data for the chip fabrication technology being used. It guides the design in terms of physical parameters like transistor sizes, layers, and routing rules.
@@ -146,18 +147,47 @@ ISA: ISA is known as "Instruction Set Architecture".It is merely a means of inte
 
    - **Synthesis (Synth):**
      - The process of converting the high-level RTL code into a **gate-level netlist** (logic gates, flip-flops). This represents the logical structure of the circuit.
+       
+![Screenshot 2024-09-07 171756](https://github.com/user-attachments/assets/50ba5041-f0b4-46a3-b344-b58c99e65a2f)
+
+
+![Screenshot 2024-09-07 171808](https://github.com/user-attachments/assets/85af2e86-de19-4dfb-8674-a8e18c8f81d4)
+
+
+
    
    - **Floor Planning + Power Planning (FP + PP):**
      - Determines the layout of major functional blocks on the chip and designs the power distribution network to ensure that all parts of the chip receive power efficiently.
+
+![Screenshot 2024-09-07 171825](https://github.com/user-attachments/assets/9a831096-df1f-4b44-a0b8-daa78e5c3a5e)
+
+
+![Screenshot 2024-09-07 170935](https://github.com/user-attachments/assets/ff068cbf-e557-44d0-aa7e-9d970ece0e89)
+
+![Screenshot 2024-09-07 171056](https://github.com/user-attachments/assets/39fd98ab-97e9-40a7-8fcb-0c06c43ed917)
+
+
    
    - **Placement (Place):**
      - In this stage, the synthesized logic gates are physically placed on the chip according to the floor plan, respecting physical design rules.
+    
+
+![Screenshot 2024-09-07 171244](https://github.com/user-attachments/assets/118f0101-a3a1-44e0-81c3-95ed767a2bac)
+
+![Screenshot 2024-09-07 171502](https://github.com/user-attachments/assets/8dc4c6d9-a261-4759-9dd2-6202c3ba3167)
+
 
    - **Clock Tree Synthesis (CTS):**
      - The process of designing a **clock tree** that ensures the clock signal reaches all sequential elements (like flip-flops) with minimal skew, ensuring synchronized operations across the chip.
+    
+ ![Screenshot 2024-09-07 171649](https://github.com/user-attachments/assets/8dc67b53-d0e9-4f70-bd1f-dd6348b53099)
+
 
    - **Routing (Route):**
      - Connects the placed cells with actual metal wires according to the design rules provided by the PDK. This step creates the physical connections (nets) between different components on the chip.
+    
+![Screenshot 2024-09-07 172144](https://github.com/user-attachments/assets/9642481b-880d-4524-96f4-7173be751062)
+
 
    - **Sign Off:**
      - This is the final stage where the design is verified against all requirements (timing, power, and design rule checks). Once verified, it is ready for fabrication, generating the final **GDSII** file (Graphical Database System II format).
