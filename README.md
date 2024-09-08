@@ -440,9 +440,9 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
    ```
     ./flow.tcl -interactive
    ```
- The command ``./flow.tcl -interactive runs the flow.tcl `` Tcl script in interactive mode. 
- This starts the OpenLANE design flow, allowing you to interact with the tool in real-time and 
- issue additional commands as needed.
+   The command ``./flow.tcl -interactive runs the flow.tcl `` Tcl script in interactive mode. 
+   This starts the OpenLANE design flow, allowing you to interact with the tool in real time and 
+   issue additional commands as needed.
 
 5. **Loading the OpenLANE Package in Tcl**
   ```
