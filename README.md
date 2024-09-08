@@ -445,18 +445,18 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
    issue additional commands as needed.
 
 5. **Loading the OpenLANE Package in Tcl**
- ```
-% package require openlane
- ```
+   ```
+   % package require openlane
+   ```
    The command ``% package requires openlane`` to be used in Tcl (Tool Command Language) to 
    load the OpenLANE package.
 
 6. **Preparing the `picorv32a` Design for Processing** 
 
-```
-% prep -design picorv32a
-```
-The command ``% prep -design picorv32a`` initializes and prepares the ``picorv32a`` design in OpenLANE for further processing.
+   ```
+   % prep -design picorv32a
+   ```
+   The command ``% prep -design picorv32a`` initializes and prepares the ``picorv32a`` design in OpenLANE for further processing.
     
    
 ![Screenshot 2024-09-08 142336](https://github.com/user-attachments/assets/6a267b30-9ec5-47f0-9eda-d4823b4d0d1c)
