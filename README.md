@@ -222,7 +222,7 @@ Static Timing Analysis (STA) is a method used to verify the timing of a digital 
 ### Practical Section's
 <details>
   <summary>
-### Common Linux Commands and Tools
+ Common Linux Commands and Tools
   </summary>
 1. **ls** – List directory contents
 2. **cd** – Change directory
