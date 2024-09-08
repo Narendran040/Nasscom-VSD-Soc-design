@@ -463,7 +463,19 @@ The command `% prep -design picorv32a` initializes and prepares the `picorv32a` 
 
   ``run_synthesis``
 
+ 
+
 ![Screenshot 2024-09-08 142408](https://github.com/user-attachments/assets/1138b174-bea0-4569-9f56-ffbd48aa0b04)
+
+ ### Calculate the flop ratio.
+
+![Screenshot 2024-09-08 155653](https://github.com/user-attachments/assets/87f60a6f-6a06-473c-8f93-504ffda6447f)
+
+
+![Screenshot 2024-09-08 160415](https://github.com/user-attachments/assets/8f7e2189-ccaa-4d7d-94a7-4bad34bd8733)
+
+![Screenshot 2024-09-08 161000](https://github.com/user-attachments/assets/9d4d4964-7c1f-4793-b086-324a9cb871e9)
+
 
 
 
