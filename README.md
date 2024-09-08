@@ -455,7 +455,7 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 ```
 % prep -design picorv32a
 ```
-The command `% prep -design picorv32a` initializes and prepares the `picorv32a` design in OpenLANE for further processing.
+    The command `% prep -design picorv32a` initializes and prepares the `picorv32a` design in OpenLANE for further processing.
    
 ![Screenshot 2024-09-08 142336](https://github.com/user-attachments/assets/6a267b30-9ec5-47f0-9eda-d4823b4d0d1c)
 
