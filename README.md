@@ -407,6 +407,34 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 
   </details>
 
+  ### Design Preparation Steps
+
+  > Invoke Openlane flow and perform synthesis
+
+#### Docker Setup for OpenLANE
+
+1. **Change Directory**
+
+  
+   ```
+   cd Desktop/work/tools/openlane_working_dir/openlane
+   ```
+
+2. **Create Docker Alias**
+
+  
+   ```
+   alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+   ```
+
+   
+
+3. **Run the Docker Container**
+
+   Once the alias is set, you can start the OpenLANE flow Docker container by simply running
+   ```
+   docker
+   ```
 
 
 # Day Two
