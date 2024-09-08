@@ -543,7 +543,7 @@ Aspect Ratio=(2 units)/(2 units)=1.The core is in a square shape
 
 ![Screenshot 2024-09-08 213139](https://github.com/user-attachments/assets/898a4cbe-99fe-4176-8fce-33973da5fb0e)
 
-Utilisation Factor = (4 sq.units)/(8 sq.units) = 0.5
+Utilisation Factor = (4 sq.units)/(8 sq.units) = 0.5(denotes 50% Utilisation)
 
 Aspect Ratio=(2 units)/(4 units) = 0.5.The core is in a rectangular shape 
 
