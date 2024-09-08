@@ -396,7 +396,7 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
    - **Files**: Includes basic logic cells with a unique height of 18 tracks (i.e., the vertical height of the standard cells), used in academic or specific open-source designs.
    - **Use**: Useful for academic purposes, teaching, or specific designs requiring compatibility with the OSU library.
 
----
+
 
 ### 12. **`sky130_sram_macros`**:
    - **Purpose**: Contains pre-designed SRAM (Static Random Access Memory) blocks.
@@ -424,7 +424,8 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 
   
    ```
-   alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+   alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e 
+   PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
    ```
 
    
@@ -439,13 +440,16 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
    ```
     ./flow.tcl -interactive
    ```
-The command ``./flow.tcl -interactive runs the flow.tcl `` Tcl script in interactive mode. This starts the OpenLANE design flow, allowing you to interact with the tool in real-time and issue additional commands as needed.
+ The command ``./flow.tcl -interactive runs the flow.tcl `` Tcl script in interactive mode. 
+ This starts the OpenLANE design flow, allowing you to interact with the tool in real-time and 
+ issue additional commands as needed.
 
 5. **Loading the OpenLANE Package in Tcl**
   ```
 % package require openlane
   ```
-   The command ``% package requires openlane`` to be used in Tcl (Tool Command Language) to load the OpenLANE package.
+   The command ``% package requires openlane`` to be used in Tcl (Tool Command Language) to 
+   load the OpenLANE package.
 
 6. **Preparing the `picorv32a` Design for Processing** 
 ```
@@ -455,7 +459,7 @@ The command `% prep -design picorv32a` initializes and prepares the `picorv32a` 
    
 ![Screenshot 2024-09-08 142336](https://github.com/user-attachments/assets/6a267b30-9ec5-47f0-9eda-d4823b4d0d1c)
 
-7.  **Synthesis Process**
+7. **Synthesis Process**
 
   ``run_synthesis``
 
