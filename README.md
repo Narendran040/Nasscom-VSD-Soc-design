@@ -290,7 +290,172 @@ This list provides a quick reference to commonly used Linux commands and their a
 
 </details>
 
+![Screenshot 2024-09-08 130148](https://github.com/user-attachments/assets/28ab5b40-882b-4862-b0e9-6c8cee0796e9)
+<details>
+  <summary>
+ libs.tech
+  </summary>
 
+  ### libs.tech
+
+
+
+The `libs.tech` directory contains technology-specific files that are essential for the design, simulation, and verification of ICs using the Skywater 130nm process. The directory you’ve shown contains folders for various tools such as `magic`, `ngspice`, and others, each tailored to work with the Sky130 PDK. Here’s a detailed breakdown of these tools and their roles:
+
+---
+
+### 1. **`irsim`**:
+   - **Purpose**: `irsim` is a switch-level simulator used for digital circuits. It simulates the behavior of logic gates and transistors by treating them as switches.
+   - **Files**: Likely contains technology-specific parameters and models needed for simulating digital circuits at the switch level for the Sky130 process.
+
+---
+
+### 2. **`klayout`**:
+   - **Purpose**: `klayout` is a GDSII (layout) viewer and editor. It’s used to visualize the physical layout of ICs.
+   - **Files**: Contains DRC rules, layer definitions, and possibly script files that allow users to check the layout against the Sky130 technology’s design rules.
+
+---
+
+### 3. **`magic`**:
+   - **Purpose**: `magic` is an open-source VLSI layout tool. It’s widely used for physical design and layout editing, particularly in educational and research environments.
+   - **Files**: This folder will include:
+     - **Technology files**: Describing the layer stack (metal, poly, etc.), design rules, and connectivity information for layout creation.
+     - **DRC files**: Rules for design rule checks.
+     - **LVS files**: To ensure the layout matches the schematic.
+
+---
+
+### 4. **`netgen`**:
+   - **Purpose**: `netgen` is a tool used for LVS (Layout vs. Schematic) verification. It checks whether the physical layout matches the circuit schematic.
+   - **Files**: Likely includes the LVS rules that are specific to the Sky130 technology, allowing accurate verification of designs against their schematics.
+
+---
+
+### 5. **`ngspice`**:
+   - **Purpose**: `ngspice` is a circuit simulator that simulates analog and mixed-signal circuits.
+   - **Files**: Includes SPICE models for transistors and other components, specific to the Sky130 process. These models define the electrical behavior of components at the 130nm node, allowing accurate analog simulations.
+
+---
+
+### 6. **`openlane`**:
+   - **Purpose**: `OpenLane` is a fully automated RTL-to-GDSII flow, widely used in digital design. It automates the process from RTL design to final GDSII layout.
+   - **Files**: This folder may contain PDK files such as LEF (Library Exchange Format) and Liberty (.lib) files that are necessary for synthesis, place-and-route, and timing analysis within the OpenLane flow.
+
+---
+
+### 7. **`qflow`**:
+   - **Purpose**: `Qflow` is another open-source RTL-to-GDSII flow. It’s typically used for simple digital circuit flows.
+   - **Files**: Includes technology-specific configuration files and design rules for the Qflow process, allowing it to work with the Sky130 technology.
+
+---
+
+### 8. **`xcircuit`**:
+   - **Purpose**: `xcircuit` is a schematic capture tool that can be used for creating circuit diagrams and layouts.
+   - **Files**: Contains templates, device symbols, and configuration files that help in drawing schematics according to the Sky130 process standards.
+
+---
+
+### 9. **`xschem`**:
+   - **Purpose**: `xschem` is a schematic capture tool, often used in analog and mixed-signal design.
+   - **Files**: This folder likely includes Sky130-specific device libraries, symbols, and configuration files, allowing `xschem` to be used for designing circuits at the schematic level with Skywater’s 130nm PDK.
+</details>
+     
+<details>
+  <summary>
+ libs.ref
+  </summary>
+
+
+
+The `libs.ref` directory contains the reference libraries, which are pre-designed, pre-characterized standard cells, memory blocks, and I/O libraries used in the design of integrated circuits using the Skywater 130nm process. These libraries are crucial for digital logic design and are typically used in synthesis, place-and-route, simulation, and verification stages of the design flow. Here's a breakdown of the contents based on the structure you've provided:
+
+---
+
+### 1. **`sky130_fd_io`**:
+   - **Purpose**: Contains the I/O library cells for the Skywater 130nm process.
+   - **Files**: This includes I/O cells that handle interfacing between the chip and the external environment. These cells may include features like voltage level shifting, ESD protection, and signal buffering.
+   - **Use**: Primarily used in the design's input/output pad ring, allowing signals to safely enter and exit the chip.
+
+---
+
+### 2. **`sky130_fd_pr`**:
+   - **Purpose**: Likely contains the power-related cells for power distribution and protection within the chip.
+   - **Files**: May include power rings, power pads, ground pads, and other cells that handle power and ground distribution across the chip.
+   - **Use**: Essential for ensuring that the design has stable power and ground connections, which is crucial for proper functionality and noise reduction.
+
+---
+
+### 3. **`sky130_fd_sc_hd`** (High Density Standard Cells):
+   - **Purpose**: This folder contains high-density standard cells designed for digital logic circuits.
+   - **Files**: Includes standard logic gates (AND, OR, NOT), flip-flops, multiplexers, and other combinational and sequential logic cells optimized for high-density layouts.
+   - **Use**: Ideal for digital designs where area minimization is critical. These cells are used during synthesis and place-and-route stages to implement logic with minimal area consumption.
+
+---
+
+### 4. **`sky130_fd_sc_hdll`** (High Density Low Leakage):
+   - **Purpose**: Contains high-density, low-leakage standard cells.
+   - **Files**: These cells are optimized to reduce power leakage, making them suitable for low-power applications while maintaining a compact design.
+   - **Use**: Used in power-sensitive designs where reducing static power consumption is a priority, such as in battery-operated devices.
+
+---
+
+### 5. **`sky130_fd_sc_hs`** (High Speed Standard Cells):
+   - **Purpose**: High-speed standard cells designed for performance-critical designs.
+   - **Files**: Contains cells optimized for speed at the cost of higher power consumption and possibly larger area.
+   - **Use**: Suitable for applications requiring high performance, such as high-frequency processors or high-speed interfaces.
+
+---
+
+### 6. **`sky130_fd_sc_hvl`** (High Voltage Logic Standard Cells):
+   - **Purpose**: Contains standard cells designed to operate at higher voltage levels.
+   - **Files**: These cells are optimized for designs that require high-voltage operation, which may be necessary for interfacing with certain I/O or mixed-signal circuits.
+   - **Use**: Used in designs that need to interface with high-voltage signals or operate in environments where higher voltage tolerance is required.
+
+---
+
+### 7. **`sky130_fd_sc_lp`** (Low Power Standard Cells):
+   - **Purpose**: Contains low-power standard cells optimized to reduce dynamic and static power consumption.
+   - **Files**: Includes cells that are specifically designed to minimize power usage, suitable for low-power applications.
+   - **Use**: Ideal for battery-powered devices and applications where energy efficiency is crucial.
+
+---
+
+### 8. **`sky130_fd_sc_ls`** (Low Speed Standard Cells):
+   - **Purpose**: These are low-speed standard cells optimized for low-power and area-efficient designs.
+   - **Files**: May include cells that prioritize reduced power and area usage over speed.
+   - **Use**: Suitable for applications that don't require high performance but need to minimize area and power consumption.
+
+---
+
+### 9. **`sky130_fd_sc_ms`** (Medium Speed Standard Cells):
+   - **Purpose**: Medium speed standard cells that balance power, performance, and area.
+   - **Files**: These cells offer a middle ground between high-speed, high-power cells and low-power, low-speed cells.
+   - **Use**: Suitable for general-purpose designs where neither speed nor power is the primary concern, offering a balanced solution.
+
+---
+
+### 10. **`sky130_ml_xx_hd`** (Machine Learning Accelerated High Density):
+   - **Purpose**: Likely contains high-density cells optimized for machine learning accelerators or similar high-performance, computation-heavy designs.
+   - **Files**: Includes cells optimized for dense computation, potentially featuring specialized structures for matrix multiplication or other ML operations.
+   - **Use**: Used in applications requiring efficient computation for machine learning or other high-performance computing tasks.
+
+---
+
+### 11. **`sky130_osu_sc_t18`** (OSU 18-Track Standard Cells):
+   - **Purpose**: A specific library developed by OSU (Oklahoma State University) with an 18-track height standard cell library for academic and open-source designs.
+   - **Files**: Includes basic logic cells with a unique height of 18 tracks (i.e., the vertical height of the standard cells), used in academic or specific open-source designs.
+   - **Use**: Useful for academic purposes, teaching, or specific designs requiring compatibility with the OSU library.
+
+---
+
+### 12. **`sky130_sram_macros`**:
+   - **Purpose**: Contains pre-designed SRAM (Static Random Access Memory) blocks.
+   - **Files**: Includes SRAM macros that are pre-characterized and optimized for the Sky130 process. These are highly critical components in many digital designs, especially for data storage.
+   - **Use**: Used in designs requiring memory storage, such as processors or ASICs. These pre-designed SRAM blocks save time compared to designing memory from scratch.
+
+
+
+  </details>
 
 # Day Two
 
