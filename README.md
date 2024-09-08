@@ -457,7 +457,7 @@ The command `% prep -design picorv32a` initializes and prepares the `picorv32a` 
 
 7.  **Synthesis Process**
 
-``run_synthesis``
+  ``run_synthesis``
 
 ![Screenshot 2024-09-08 142408](https://github.com/user-attachments/assets/1138b174-bea0-4569-9f56-ffbd48aa0b04)
 
