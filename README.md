@@ -411,7 +411,7 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 
   > Invoke Openlane flow and perform synthesis
 
-#### Docker Setup for OpenLANE
+
 
 1. **Change Directory**
 
@@ -435,6 +435,32 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
    ```
    docker
    ```
+4. **Running the OpenLANE Flow Script in Interactive Mode**
+   ```
+    ./flow.tcl -interactive
+   ```
+The command ``./flow.tcl -interactive runs the flow.tcl `` Tcl script in interactive mode. This starts the OpenLANE design flow, allowing you to interact with the tool in real-time and issue additional commands as needed.
+
+5. **Loading the OpenLANE Package in Tcl**
+  ```
+% package require openlane
+  ```
+   The command ``% package requires openlane`` to be used in Tcl (Tool Command Language) to load the OpenLANE package.
+
+6. **Preparing the `picorv32a` Design for Processing** 
+```
+% prep -design picorv32a
+```
+The command `% prep -design picorv32a` initializes and prepares the `picorv32a` design in OpenLANE for further processing.
+   
+![Screenshot 2024-09-08 142336](https://github.com/user-attachments/assets/6a267b30-9ec5-47f0-9eda-d4823b4d0d1c)
+
+7.  **Synthesis Process**
+
+``run_synthesis``
+
+![Screenshot 2024-09-08 142408](https://github.com/user-attachments/assets/1138b174-bea0-4569-9f56-ffbd48aa0b04)
+
 
 
 # Day Two
