@@ -219,7 +219,7 @@ Static Timing Analysis (STA) is a method used to verify the timing of a digital 
 </details>
 
 
-### Practical Section's
+### Practical Section-1
 <details>
   <summary>
  Basic Linux Commands 
@@ -483,11 +483,20 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 
 # Day Two
 
+# Good FloorPlan Vs Bad FloorPlan and Introduction to Library Cells
 
-# Height and Width of core and die
+<details>
+  <summary>
+  Height and Width of core and die
+  </summary>
+
 
 
 ![flll](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/97004977-3bbe-44bd-ad2c-9c8ac3136935)
+
+
+
+
 
  
  
@@ -503,6 +512,10 @@ Aspect Ratio =  Height
                 Width
 ```
 
+</details>
+
+
+# Practical Section-2
 > To run the picorv32a floorplan in openLANE:
 
 ```
