@@ -225,7 +225,7 @@ Static Timing Analysis (STA) is a method used to verify the timing of a digital 
  Basic Linux Commands 
   </summary>
 
-**`cd`** : opens the particular folder
+**`cd`** : change directory
 
 **`ls`** : lists the content of the folder
 
