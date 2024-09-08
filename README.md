@@ -224,7 +224,7 @@ Static Timing Analysis (STA) is a method used to verify the timing of a digital 
   <summary>
  Common Linux Commands and Tools
   </summary>
----
+
 
 ## Basic Linux Tools and Abbreviations
 
@@ -285,7 +285,7 @@ This list provides a quick reference to commonly used Linux commands and their a
 - **`alias`** – Create shortcuts for commands
 - **`man`** – Manual for command (help documentation)
 
----
+
 
 
 </details>
