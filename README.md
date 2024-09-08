@@ -487,17 +487,40 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 
 <details>
   <summary>
-  Height and Width of core and die
+  Theory
   </summary>
 
-
+# Height and Width of core and die
 
 ![flll](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/97004977-3bbe-44bd-ad2c-9c8ac3136935)
 
+**Core**: The core is a central area containing the functional logic, such as transistors, logic gates, registers, and memory. It performs the main operations of the chip, excluding peripheral components like I/O pads and power grids. The core's size is optimized for performance, power, and area.
+
+
+**Die**:The die is the physical semiconductor piece that includes the core and other peripheral components like I/O pads, power grids, and guard rings.
+
+The height and width of the core area will be decided by the netlist of the design. It will be based on the no.of components required to execute the logic and the height and width of the die area will be dependent on the core area height and width.
+
+![Screenshot 2024-09-08 175216](https://github.com/user-attachments/assets/41fa160c-43c2-4f91-930a-abcc6d87c0b8)
+
+FF = Flip Flops/Latches/Registers
+
+A1, 01 = Standard Cells (AND, OR, INVERTER)
+
+The above-shown connections are a netlist with 2 flops and 2 gates.
+
+**netlist**: A "netlist" describes the connectivity of an electronic design.
 
 
 
+![Screenshot 2024-09-08 182847](https://github.com/user-attachments/assets/a802c17c-4d1e-4414-bf50-11e0664265ff)
+Consider a netlist that has two logic gates and two flipflops each having an area of 1 sq. unit. The netlist contains 4 elements and the minimum total area required for the core area will be 4 sq. units.
 
+![Screenshot 2024-09-08 183905](https://github.com/user-attachments/assets/7d1e8101-9016-49ca-b26f-eb32c0aa4779)
+
+**Utilization Factor**: Utilization Factor is defined as "The ratio of the core area occupied by the netlist to the total core area".For a good FloorPlan, The Utilization Factor should never be '1' because when the Utilization factor becomes '1', there will be no place for adding additional logic if needed and it will be considered as a bad FloorPlan.
+
+**Aspect Ratio**: Aspect Ratio is defined as "The ratio of Height of the core to the width of the core". If the Aspect ratio is '1' , then the core is said to be in a square shape and other than '1' the core will be a rectangle.
  
  
 ```
@@ -512,7 +535,21 @@ Aspect Ratio =  Height
                 Width
 ```
 
+![Screenshot 2024-09-08 183905](https://github.com/user-attachments/assets/2e89c686-16b4-435e-971c-4e8c871c10af)
+
+Utilisation Factor = 4 sq.units/4 sq.units=1(1 denotes 100% Utilisation)
+
+Aspect Ratio=(2 units)/(2 units)=1.The core is in a square shape 
+
+![Screenshot 2024-09-08 213139](https://github.com/user-attachments/assets/898a4cbe-99fe-4176-8fce-33973da5fb0e)
+
+Utilisation Factor = (4 sq.units)/(8 sq.units) = 0.5
+
+Aspect Ratio=(2 units)/(4 units) = 0.5.The core is in a rectangular shape 
+
+
 </details>
+
 
 
 # Practical Section-2
