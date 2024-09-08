@@ -220,11 +220,47 @@ Static Timing Analysis (STA) is a method used to verify the timing of a digital 
 
 
 ### Practical Section's
+<details>
+  <summary>
+### Common Linux Commands and Tools
+  </summary>
+1. **ls** – List directory contents
+2. **cd** – Change directory
+3. **pwd** – Print working directory
+4. **cp** – Copy files and directories
+5. **mv** – Move/rename files and directories
+6. **rm** – Remove files or directories
+7. **rmdir** – Remove empty directories
+8. **mkdir** – Make directories
+9. **touch** – Create an empty file or update the timestamp
+10. **cat** – Concatenate and display file contents
+11. **echo** – Display message or write text to a file
+12. **man** – Manual for command (help documentation)
+13. **grep** – Search text using patterns
+14. **find** – Search for files and directories
+15. **chmod** – Change file permissions
+16. **chown** – Change file owner and group
+17. **df** – Display disk space usage
+18. **du** – Show file and directory space usage
+19. **ps** – Display running processes
+20. **top** – Show real-time system processes
+21. **kill** – Terminate processes
+22. **ifconfig** – Display or configure network interfaces
+23. **ping** – Test network connectivity
+24. **wget** – Download files from the web
+25. **curl** – Transfer data from or to a server
+26. **tar** – Archive files
+27. **gzip** – Compress files
+28. **ssh** – Secure Shell for remote login
+29. **scp** – Secure copy (remote file copy)
+30. **nano** – Simple text editor
+31. **vim** – Advanced text editor
+32. **exit** – Exit terminal or shell session
+33. **history** – Show command history
+34. **alias** – Create shortcuts for commands
+35. **uname** – Display system information
 
-
-
-
-
+</details>
 
 
 
