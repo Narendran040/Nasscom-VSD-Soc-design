@@ -222,68 +222,18 @@ Static Timing Analysis (STA) is a method used to verify the timing of a digital 
 ### Practical Section's
 <details>
   <summary>
- Common Linux Commands and Tools
+ Basic Linux Commands 
   </summary>
 
+**`cd`** : opens the particular folder
 
-## Basic Linux Tools and Abbreviations
+**`ls`** : lists the content of the folder
 
-This list provides a quick reference to commonly used Linux commands and their abbreviations:
+**`pwd`** : shows the present working directory
 
-### File and Directory Management
-- **`ls`** – List directory contents
-- **`cd`** – Change directory
-- **`pwd`** – Print working directory
-- **`cp`** – Copy files and directories
-- **`mv`** – Move/rename files and directories
-- **`rm`** – Remove files or directories
-- **`rmdir`** – Remove empty directories
-- **`mkdir`** – Make directories
-- **`touch`** – Create an empty file or update the timestamp
+**`mkdir`** : to make a new directory
 
-### File Viewing and Editing
-- **`cat`** – Concatenate and display file contents
-- **`echo`** – Display message or write text to a file
-- **`nano`** – Simple text editor
-- **`vim`** – Advanced text editor
-
-### Search and Find
-- **`grep`** – Search text using patterns
-- **`find`** – Search for files and directories
-
-### Permissions and Ownership
-- **`chmod`** – Change file permissions
-- **`chown`** – Change file owner and group
-
-### Disk and Space Management
-- **`df`** – Display disk space usage
-- **`du`** – Show file and directory space usage
-
-### Process Management
-- **`ps`** – Display running processes
-- **`top`** – Show real-time system processes
-- **`kill`** – Terminate processes
-
-### Networking and Downloading
-- **`ifconfig`** – Display or configure network interfaces
-- **`ping`** – Test network connectivity
-- **`wget`** – Download files from the web
-- **`curl`** – Transfer data from or to a server
-
-### Compression and Archiving
-- **`tar`** – Archive files
-- **`gzip`** – Compress files
-
-### Remote Access
-- **`ssh`** – Secure Shell for remote login
-- **`scp`** – Secure copy (remote file copy)
-
-### System Information and Miscellaneous
-- **`uname`** – Display system information
-- **`exit`** – Exit terminal or shell session
-- **`history`** – Show command history
-- **`alias`** – Create shortcuts for commands
-- **`man`** – Manual for command (help documentation)
+**`clear`** : clears the terminal screen
 
 
 
@@ -456,6 +406,8 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 
 
   </details>
+
+
 
 # Day Two
 
