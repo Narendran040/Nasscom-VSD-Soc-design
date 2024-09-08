@@ -250,7 +250,7 @@ Static Timing Analysis (STA) is a method used to verify the timing of a digital 
 
 
 
-The `libs.tech` directory contains technology-specific files that are essential for the design, simulation, and verification of ICs using the Skywater 130nm process. The directory you’ve shown contains folders for various tools such as `magic`, `ngspice`, and others, each tailored to work with the Sky130 PDK. Here’s a detailed breakdown of these tools and their roles:
+The `libs.tech` directory contains technology-specific files that are essential for the design, simulation, and verification of ICs using the Skywater 130nm process. The directory  contains folders for various tools such as `magic`, `ngspice`, and others, each tailored to work with the Sky130 PDK. Here’s a detailed breakdown of these tools and their roles:
 
 ---
 
