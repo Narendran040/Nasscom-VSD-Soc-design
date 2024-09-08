@@ -432,7 +432,7 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 
 3. **Run the Docker Container**
 
-   Once the alias is set, you can start the OpenLANE flow Docker container by simply running
+   Once the alias is set, you can start the OpenLANE flow Docker container by  running
    ```
    docker
    ```
