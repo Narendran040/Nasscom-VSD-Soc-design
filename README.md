@@ -644,18 +644,19 @@ Since **1000 unit distance = 1 micron**:
    ```
 
 #### Area of the die in square microns:
-   ```
-   Area = 660.685 microns * 671.405 microns = 443587.212425 square microns
-   ```
+     
+    
+      Area = 660.685 microns * 671.405 microns = 443587.212425 square microns
+    
+    
 
+ 
  . The **area of the die** is approximately **443587.21 square microns**.
 
 
 
 
-Here is a properly formatted header and instructions for the commands you're about to run:
 
----
 
 # Loading the Floorplan DEF in Magic Tool
 
