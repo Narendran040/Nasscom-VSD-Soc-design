@@ -600,8 +600,15 @@ Aspect Ratio=(2 units)/(4 units) = 0.5.The core is in a rectangular shape
    ```
    % prep -design picorv32a
    ```
-   The command ``% prep -design picorv32a`` initializes and prepares the ``picorv32a`` design in OpenLANE for further processi
-7. **To run the picorv32a floorplan in openLANE**
+   The command ``% prep -design picorv32a`` initializes and prepares the ``picorv32a`` design in OpenLANE for further processing
+
+7. **Synthesis Process**
+
+   ```
+   run_synthesis
+   ```
+
+8. **To run the picorv32a floorplan in openLANE**
 
    ```
    run_floorplan
