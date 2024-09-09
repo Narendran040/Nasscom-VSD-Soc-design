@@ -646,7 +646,7 @@ Since **1000 unit distance = 1 micron**:
 #### Area of the die in square microns:
      
     
-      Area = 660.685 microns * 671.405 microns = 443587.212425 square microns
+    Area = 660.685 microns * 671.405 microns = 443587.212425 square microns
     
     
 
