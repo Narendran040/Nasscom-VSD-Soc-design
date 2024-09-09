@@ -301,7 +301,7 @@ The `libs.tech` directory contains technology-specific files that are essential 
 
 ### 8. **`xcircuit`**:
    - **Purpose**: `xcircuit` is a schematic capture tool that can be used for creating circuit diagrams and layouts.
-   - **Files**: Contains templates, device symbols, and configuration files that help in drawing schematics according to the Sky130 process standards.
+   - **Files**: Contains templates, device symbols, and configuration files that help draw schematics according to the Sky130 process standards.
 
 ---
 
@@ -317,20 +317,20 @@ The `libs.tech` directory contains technology-specific files that are essential 
 
 
 
-The `libs.ref` directory contains the reference libraries, which are pre-designed, pre-characterized standard cells, memory blocks, and I/O libraries used in the design of integrated circuits using the Skywater 130nm process. These libraries are crucial for digital logic design and are typically used in synthesis, place-and-route, simulation, and verification stages of the design flow. Here's a breakdown of the contents based on the structure you've provided:
+The `libs.ref` directory contains the reference libraries, which are pre-designed, pre-characterized standard cells, memory blocks, and I/O libraries used in the design of integrated circuits using the Skywater 130nm process. These libraries are crucial for digital logic design and are typically used in the synthesis, place-and-route, simulation, and verification stages of the design flow. Here's a breakdown of the contents based on the structure you've provided:
 
 ---
 
 ### 1. **`sky130_fd_io`**:
    - **Purpose**: Contains the I/O library cells for the Skywater 130nm process.
-   - **Files**: This includes I/O cells that handle interfacing between the chip and the external environment. These cells may include features like voltage level shifting, ESD protection, and signal buffering.
-   - **Use**: Primarily used in the design's input/output pad ring, allowing signals to safely enter and exit the chip.
+   - **Files**: This includes I/O cells that handle interfacing between the chip and the external environment. These cells may include voltage level shifting, ESD protection, and signal buffering.
+   - **Use**: This is primarily used in the design's input/output pad ring, allowing signals to enter and exit the chip safely.
 
 ---
 
 ### 2. **`sky130_fd_pr`**:
    - **Purpose**: Likely contains the power-related cells for power distribution and protection within the chip.
-   - **Files**: May include power rings, power pads, ground pads, and other cells that handle power and ground distribution across the chip.
+   - **Files**: This may include power rings, power pads, ground pads, and other cells that handle power and ground distribution across the chip.
    - **Use**: Essential for ensuring that the design has stable power and ground connections, which is crucial for proper functionality and noise reduction.
 
 ---
@@ -349,7 +349,7 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 
 ---
 
-### 5. **`sky130_fd_sc_hs`** (High Speed Standard Cells):
+### 5. **`sky130_fd_sc_hs`** (High-Speed Standard Cells):
    - **Purpose**: High-speed standard cells designed for performance-critical designs.
    - **Files**: Contains cells optimized for speed at the cost of higher power consumption and possibly larger area.
    - **Use**: Suitable for applications requiring high performance, such as high-frequency processors or high-speed interfaces.
@@ -378,7 +378,7 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 ---
 
 ### 9. **`sky130_fd_sc_ms`** (Medium Speed Standard Cells):
-   - **Purpose**: Medium speed standard cells that balance power, performance, and area.
+   - **Purpose**: Medium-speed standard cells that balance power, performance, and area.
    - **Files**: These cells offer a middle ground between high-speed, high-power cells and low-power, low-speed cells.
    - **Use**: Suitable for general-purpose designs where neither speed nor power is the primary concern, offering a balanced solution.
 
@@ -553,11 +553,59 @@ Aspect Ratio=(2 units)/(4 units) = 0.5.The core is in a rectangular shape
 
 
 # Practical Section-2
-> To run the picorv32a floorplan in openLANE:
+  > Invoke Openlane flow and perform synthesis
 
-```
- run_floorplan
- ```
+
+
+1. **Change Directory**
+
+  
+   ```
+   cd Desktop/work/tools/openlane_working_dir/openlane
+   ```
+
+2. **Create Docker Alias**
+
+  
+   ```
+   alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e 
+   PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+   ```
+
+   
+
+3. **Run the Docker Container**
+
+   Once the alias is set, you can start the OpenLANE flow Docker container by  running
+   ```
+   docker
+   ```
+4. **Running the OpenLANE Flow Script in Interactive Mode**
+   ```
+    ./flow.tcl -interactive
+   ```
+   The command ``./flow.tcl -interactive runs the flow.tcl `` Tcl script in interactive mode. 
+   This starts the OpenLANE design flow, allowing you to interact with the tool in real time and 
+   issue additional commands as needed.
+
+5. **Loading the OpenLANE Package in Tcl**
+   ```
+   % package require openlane
+   ```
+   The command ``% package requires openlane`` to be used in Tcl (Tool Command Language) to 
+   load the OpenLANE package.
+
+6. **Preparing the `picorv32a` Design for Processing** 
+
+   ```
+   % prep -design picorv32a
+   ```
+   The command ``% prep -design picorv32a`` initializes and prepares the ``picorv32a`` design in OpenLANE for further processi
+7. **To run the picorv32a floorplan in openLANE**
+
+   ```
+   run_floorplan
+   ```
 
  ![image](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/6ce45bab-2fd5-44ee-9c8f-088898dbc98e)
 
