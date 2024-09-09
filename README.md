@@ -618,6 +618,9 @@ Aspect Ratio=(2 units)/(4 units) = 0.5.The core is in a rectangular shape
 ![Screenshot 2024-09-09 122637](https://github.com/user-attachments/assets/e8fe1639-57da-4d9f-836e-92581c3267ae)
 
 ![Screenshot 2024-09-09 122712](https://github.com/user-attachments/assets/be3bfe91-22c9-449d-ba83-7f7f0e0f5a63)
+![Screenshot 2024-09-09 130656](https://github.com/user-attachments/assets/a948fdc7-999a-4cfe-8c81-4fd758c9ac3c)
+
+![Screenshot 2024-09-09 130232](https://github.com/user-attachments/assets/62b979e3-4319-45ca-aa7b-83d7eecc7734)
 
 
  > To view the floorplan, Magic is invoked after moving to the results/floorplan directory:
