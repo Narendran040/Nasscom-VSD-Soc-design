@@ -664,7 +664,7 @@ Here is a properly formatted header and instructions for the commands you're abo
 1. **Change directory**: Navigate to the folder containing the generated floorplan `.def` file.
 
 ```bash
-cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06/results/floorplan/
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/09-09_06-53/results/floorplan/
 ```
 
 2. **Run Magic**: Load the floorplan `.def` file using the Magic tool and the Sky130 technology file.
@@ -693,30 +693,49 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 ![Screenshot 2024-09-09 142427](https://github.com/user-attachments/assets/40df7fa2-8ab0-44af-8a67-b3909f4d07c7)
 
-# Placement run on OpenLANE & view in Magic
+9. **Placement run on OpenLANE & view in Magic**
 ```
 run_placement
 ```
-
-
-![rp](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/8505d9da-2085-4548-879c-f925faab28c4)
+![Screenshot 2024-09-09 154021](https://github.com/user-attachments/assets/d74f9dfd-18ed-4490-ace9-a998d7c6c14b)
 
 
 
->To view the placement, Magic is invoked after moving to the results/placement directory:
+![Screenshot 2024-09-09 155144](https://github.com/user-attachments/assets/9dab8597-5887-4838-b033-5a493b120a19)
 
+
+
+# Loading the Placement DEF in Magic Tool
+
+
+### Steps:
+
+1. **Change directory**: Navigate to the folder containing the generated placement `.def` file.
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/09-09_06-53/results/placement/
 ```
-magic -T /home/narendran/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.max.lef def read picorv32.def &
+
+2. **Run Magic**: Load the placement `.def` file in the Magic tool, using the Sky130 technology file.
+
+```bash
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
 ```
 
 
-![pl2](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/f7f3d78c-792e-47f7-a0b1-4a3929b89476)
+
+![Screenshot 2024-09-09 155437](https://github.com/user-attachments/assets/70cfee88-957b-443e-9fbb-5d8a1c6f3afe)
+
+
+
+
+
 
 # Observing Standard Cell Placement
 
-![fll1](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/9ed3d631-ef2f-4696-b354-21694e9f8c3d)
+![Screenshot 2024-09-09 160213](https://github.com/user-attachments/assets/f06c9324-b336-4f21-a9c2-14082a308435)
 
-![fll2](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/8ebe303f-1750-4910-aa27-93cff1ff9b8d)
+![Screenshot 2024-09-09 155403](https://github.com/user-attachments/assets/9e6d71a7-f034-4dba-a28c-43cd19808192)
 
 # Standard Cell Design Flow
 1. Inputs: PDKs, DRC & LVS rules, SPICE models, libraries, and user-defined specifications.
