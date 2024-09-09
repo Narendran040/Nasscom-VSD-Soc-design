@@ -653,16 +653,45 @@ Since **1000 unit distance = 1 micron**:
 
 
 
+Here is a properly formatted header and instructions for the commands you're about to run:
+
+---
+
+# Loading the Floorplan DEF in Magic Tool
+
+### Steps:
+
+1. **Change directory**: Navigate to the folder containing the generated floorplan `.def` file.
+
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06/results/floorplan/
+```
+
+2. **Run Magic**: Load the floorplan `.def` file using the Magic tool and the Sky130 technology file.
+
+```bash
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+
+---
 
 
- > To view the floorplan, Magic is invoked after moving to the results/floorplan directory:
- ```
- magic -T /home/narendran/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.max.lef def read picorv32.def &
- ```
 
-![Screenshot 2024-05-18 210345](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/261e5630-a89b-4951-8f43-4a04d74faaf3)
+![Screenshot 2024-09-09 135635](https://github.com/user-attachments/assets/a1483421-1435-4f9c-ad9d-ed697b049080)
 
- 
+![Screenshot 2024-09-09 141033](https://github.com/user-attachments/assets/bbce151e-be92-4d13-b411-0a71731ee443)
+
+![Screenshot 2024-09-09 142735](https://github.com/user-attachments/assets/596a5056-af9a-4b11-a781-f17c6d808ce9)
+
+![Screenshot 2024-09-09 141225](https://github.com/user-attachments/assets/5d11b1c0-8fc7-4120-a9cd-3bd86f4878d5)
+
+![Screenshot 2024-09-09 142502](https://github.com/user-attachments/assets/2559f451-ed79-4849-82c1-ced0e2ad5b63)
+
+ ![Screenshot 2024-09-09 142647](https://github.com/user-attachments/assets/f7208ba9-c721-44f9-922d-eaae40643a55)
+![Screenshot 2024-09-09 142345](https://github.com/user-attachments/assets/4c19a5e6-6e09-42b9-a19d-143ac814eb02)
+![Screenshot 2024-09-09 141647](https://github.com/user-attachments/assets/35da3424-88cb-4111-959e-100c540963e7)
+
+![Screenshot 2024-09-09 142427](https://github.com/user-attachments/assets/40df7fa2-8ab0-44af-8a67-b3909f4d07c7)
 
 # Placement run on OpenLANE & view in Magic
 ```
