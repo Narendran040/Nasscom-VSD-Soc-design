@@ -463,7 +463,9 @@ The `libs.ref` directory contains the reference libraries, which are pre-designe
 
 7. **Synthesis Process**
 
-  ``run_synthesis``
+   ```
+   run_synthesis
+   ```
 
  
 
