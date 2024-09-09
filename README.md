@@ -615,8 +615,10 @@ Aspect Ratio=(2 units)/(4 units) = 0.5.The core is in a rectangular shape
    ```
    run_floorplan
    ```
+![Screenshot 2024-09-09 122637](https://github.com/user-attachments/assets/e8fe1639-57da-4d9f-836e-92581c3267ae)
 
- ![image](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/6ce45bab-2fd5-44ee-9c8f-088898dbc98e)
+![Screenshot 2024-09-09 122712](https://github.com/user-attachments/assets/be3bfe91-22c9-449d-ba83-7f7f0e0f5a63)
+
 
  > To view the floorplan, Magic is invoked after moving to the results/floorplan directory:
  ```
