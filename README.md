@@ -623,6 +623,38 @@ Aspect Ratio=(2 units)/(4 units) = 0.5.The core is in a rectangular shape
 ![Screenshot 2024-09-09 130232](https://github.com/user-attachments/assets/62b979e3-4319-45ca-aa7b-83d7eecc7734)
 
 
+
+### Die Area Calculation
+
+#### Values:
+- **Die width in unit distance**= `660685-0`
+- **Die height in unit distance**= `671405-0`
+
+#### Conversion to microns:
+Since **1000 unit distance = 1 micron**:
+
+1. **Die width in microns**:
+   ```
+   660685 / 1000 = 660.685 microns
+   ```
+
+2. **Die height in microns**:
+   ```
+   671405 / 1000 = 671.405 microns
+   ```
+
+#### Area of the die in square microns:
+  ```
+  Area = 660.685 microns * 671.405 microns = 443587.212425 square microns
+  ```
+
+ . The **area of the die** is approximately **443587.21 square microns**.
+
+
+
+
+
+
  > To view the floorplan, Magic is invoked after moving to the results/floorplan directory:
  ```
  magic -T /home/narendran/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.max.lef def read picorv32.def &
