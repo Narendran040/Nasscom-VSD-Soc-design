@@ -767,7 +767,10 @@ Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
 
 
  # Day Three
- 
+ <details>
+  <summary>
+  Theory
+  </summary>
  
   # 16 Mask CMOS Fabrication
 
@@ -788,20 +791,49 @@ Rise transition time: time(slew_high_rise_thr) - time(slew_low_rise_thr)
 
  ![16 mp](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/841eec8d-12b8-4c12-bd3f-314421d7642e)
 
+</details>
+
  # Inverter Standard cell Layout
  The inverter magic file is sourced from vsdstdcelldesign by cloning it within the openlane_working_dir/open lane directory as follows:
  ```
 git clone https://github.com/nickson-jose/vsdstdcelldesign
 ```
-> Invoking sky_inv.mag using Magic
+![Screenshot 2024-09-10 201222](https://github.com/user-attachments/assets/937290f6-f4af-48b7-84eb-bc14d2231ec2)
+
+**Copying the `sky130A.tech` File to the VSD Standard Cell Design Directory**
+
+
+```bash
+cp sky130A.tech /home/vsdsuser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+```
+
+This command is copying a file named `sky130A.tech` from the current directory into the `/home/vsdsuser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign` directory.
+
+The `cp` command is used for copying files in Linux.
+
+![Screenshot 2024-09-10 201939](https://github.com/user-attachments/assets/e81e5f66-0fb0-4188-9ee2-f54c617d32e2)
+
+
+ **Invoking sky_inv.mag using Magic**
 
 ```
 magic -T sky130A.tech sky130_inv.mag &
 ```
+![Screenshot 2024-09-10 202313](https://github.com/user-attachments/assets/670cb637-74f9-4a6b-81b6-37f4232dadb4)
 
-![Cmos](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/5c61f265-58fa-40bc-91ef-9d3ad9379cc7)
+![Screenshot 2024-09-10 202413](https://github.com/user-attachments/assets/49ad8b84-3c0f-4c1b-a75f-608c73d1af92)
 
-![cmos 2](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/aab01056-6e53-4ee4-9f95-575ea6ad5bee)
+**NMOS and PMOS Layout in Magic**
+
+![Screenshot 2024-09-10 213508](https://github.com/user-attachments/assets/9439df41-b2c8-4cd3-868c-70062e06654f)
+
+![Screenshot 2024-09-10 213551](https://github.com/user-attachments/assets/01f4b37e-83ca-4873-bd87-1382d8252f56)
+
+![Screenshot 2024-09-10 214307](https://github.com/user-attachments/assets/23baf255-66d5-41a9-af17-b87238370a20)
+![Screenshot 2024-09-10 215128](https://github.com/user-attachments/assets/4490df11-d88d-4be2-8c40-7cf2de8b4db5)
+
+![Screenshot 2024-09-10 214208](https://github.com/user-attachments/assets/bafca7f0-c55d-4e70-9018-ab7ab17aafeb)
+
 
 # Spice extraction
 
