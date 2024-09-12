@@ -894,16 +894,16 @@ ext2spice
 We calculate the rise transition time as follows:
 
 ```
-Rise transition time = 2.20023 ns - 2.18581 ns = 0.01442 ns
+Rise transition time = 2.20029 -2.17992= 0.02037 ns
 ```
 
 Which can be converted to picoseconds (ps):
 
 ```
-0.01442 ns = 14.42 ps
+ 0.02037 ns = 20.37 ps
 ```
 
-Thus, the rise transition time is **14.42 ps**.
+Thus, the rise transition time is **20.37 ps**.
 
 ![Screenshot 2024-09-12 213911](https://github.com/user-attachments/assets/0024bc32-9acb-4ff5-bae5-03a4bf2c9234)
 
@@ -920,13 +920,13 @@ Thus, the rise transition time is **14.42 ps**.
 We calculate the rise transition time as follows:
 
 ```
-Fall transition time = 4.04999 ns - 4.02 ns = 0.02999 ns
+Fall transition time = 4.06673-4.04015 = 0.02658 ns
 ```
 
 Which can be converted to picoseconds (ps):
 
 ```
-0.02999 ns = 29.99 ps
+0.02658 ns = 26.58 ps
 ```
 
 Thus, the Fall transition time is **29.99 ps**.
