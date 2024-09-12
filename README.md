@@ -875,7 +875,66 @@ ext2spice
 
 ![Screenshot 2024-09-11 222126](https://github.com/user-attachments/assets/8778f590-2112-479d-8bf3-bfbe79f55177)
 
+**Edited spice file ready for ngspice simulation**
+![Screenshot 2024-09-12 164226](https://github.com/user-attachments/assets/e125230f-ad00-43ae-bdd8-a31838a110f4)
+![Screenshot 2024-09-12 164156](https://github.com/user-attachments/assets/5b084dc6-342a-4e7f-8c5d-e60a061b92f2)
 
+![Screenshot 2024-09-12 164323](https://github.com/user-attachments/assets/03dc0d08-14e6-4c67-a578-d7ebcd50e1cf)
+
+![Screenshot 2024-09-12 193801](https://github.com/user-attachments/assets/c2f2070e-b899-4ffe-9411-fed41761db08)
+
+![Screenshot 2024-09-12 193827](https://github.com/user-attachments/assets/f19a617f-93f2-463d-8402-9ab40cfc2a00)
+
+![Screenshot 2024-09-12 194235](https://github.com/user-attachments/assets/f5a364ce-1e25-475c-afcc-6b51b319aa38)
+
+![Screenshot 2024-09-12 194247](https://github.com/user-attachments/assets/5a96e924-ac4a-413f-986e-ea3164982e6c)
+
+
+
+### Rise Transition Time Calculation
+
+We calculate the rise transition time as follows:
+
+```
+Rise transition time = 2.20023 ns - 2.18581 ns = 0.01442 ns
+```
+
+Which can be converted to picoseconds (ps):
+
+```
+0.01442 ns = 14.42 ps
+```
+
+Thus, the rise transition time is **14.42 ps**.
+
+
+
+
+
+![Screenshot 2024-09-12 195943](https://github.com/user-attachments/assets/755518c1-28a9-4021-9c09-b6a403b8a939)
+
+
+![Screenshot 2024-09-12 195954](https://github.com/user-attachments/assets/16a0122a-a5d7-4e50-af47-3e69e331e0d1)
+
+![Screenshot 2024-09-12 200321](https://github.com/user-attachments/assets/e9db80c6-ca47-45ec-bf4c-51f1b4f870c9)
+
+![Screenshot 2024-09-12 200305](https://github.com/user-attachments/assets/c2818314-b958-4c70-9b7a-5f6b8d787004)
+
+### Fall Transition Time Calculation
+
+We calculate the rise transition time as follows:
+
+```
+Fall transition time = $.04999 ns - 4.02 ns = 0.02999 ns
+```
+
+Which can be converted to picoseconds (ps):
+
+```
+0.02999 ns = 29.99 ps
+```
+
+Thus, the Fall transition time is **29.99 ps**.
 
 
  # Day Four
