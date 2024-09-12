@@ -881,14 +881,12 @@ ext2spice
 
 ![Screenshot 2024-09-12 164323](https://github.com/user-attachments/assets/03dc0d08-14e6-4c67-a578-d7ebcd50e1cf)
 
-![Screenshot 2024-09-12 193801](https://github.com/user-attachments/assets/c2f2070e-b899-4ffe-9411-fed41761db08)
+![Screenshot 2024-09-12 213139](https://github.com/user-attachments/assets/2108b7ed-f532-416b-bfd3-8df176b63a3c)
 
-![Screenshot 2024-09-12 193827](https://github.com/user-attachments/assets/f19a617f-93f2-463d-8402-9ab40cfc2a00)
+![Screenshot 2024-09-12 213156](https://github.com/user-attachments/assets/b0f0ce9f-b416-4550-8dd9-cf74f60a8ee0)
 
-![Screenshot 2024-09-12 194235](https://github.com/user-attachments/assets/f5a364ce-1e25-475c-afcc-6b51b319aa38)
-
-![Screenshot 2024-09-12 194247](https://github.com/user-attachments/assets/5a96e924-ac4a-413f-986e-ea3164982e6c)
-
+![Screenshot 2024-09-12 213346](https://github.com/user-attachments/assets/6566617b-801d-4f9b-a61c-b74dbb1352c1)
+![Screenshot 2024-09-12 213404](https://github.com/user-attachments/assets/8bce9b66-44de-4d9f-b77a-fd64cbdff91b)
 
 
 ### Rise Transition Time Calculation
@@ -907,25 +905,22 @@ Which can be converted to picoseconds (ps):
 
 Thus, the rise transition time is **14.42 ps**.
 
+![Screenshot 2024-09-12 213911](https://github.com/user-attachments/assets/0024bc32-9acb-4ff5-bae5-03a4bf2c9234)
+
+![Screenshot 2024-09-12 213924](https://github.com/user-attachments/assets/5f2d25c9-2f68-4325-b90a-a245b7f6d8bc)
+
+![Screenshot 2024-09-12 214220](https://github.com/user-attachments/assets/c3dfe9d8-e74f-40ea-b7ce-d3c299bf5c6b)
+
+![Screenshot 2024-09-12 214234](https://github.com/user-attachments/assets/862ef825-b012-4ca3-9a03-f25f8a75a32c)
 
 
-
-
-![Screenshot 2024-09-12 195943](https://github.com/user-attachments/assets/755518c1-28a9-4021-9c09-b6a403b8a939)
-
-
-![Screenshot 2024-09-12 195954](https://github.com/user-attachments/assets/16a0122a-a5d7-4e50-af47-3e69e331e0d1)
-
-![Screenshot 2024-09-12 200321](https://github.com/user-attachments/assets/e9db80c6-ca47-45ec-bf4c-51f1b4f870c9)
-
-![Screenshot 2024-09-12 200305](https://github.com/user-attachments/assets/c2818314-b958-4c70-9b7a-5f6b8d787004)
 
 ### Fall Transition Time Calculation
 
 We calculate the rise transition time as follows:
 
 ```
-Fall transition time = $.04999 ns - 4.02 ns = 0.02999 ns
+Fall transition time = 4.04999 ns - 4.02 ns = 0.02999 ns
 ```
 
 Which can be converted to picoseconds (ps):
@@ -936,6 +931,34 @@ Which can be converted to picoseconds (ps):
 
 Thus, the Fall transition time is **29.99 ps**.
 
+
+
+![Screenshot 2024-09-12 221231](https://github.com/user-attachments/assets/7dc4135a-8775-46b4-890e-f2d0b9b427e4)
+
+![Screenshot 2024-09-12 221245](https://github.com/user-attachments/assets/48bc3fb2-0684-43bd-ae0d-75330e3c70e7)
+**Rise Cell Delay**
+```
+Rise Cell Delay= 2.1808-2.18092=-0.00012 ns
+```
+Which can be converted to picoseconds (ps):
+```
+-0.00012 ns=-00.12 ps
+```
+Thus, the Rise cell delay is **-00.12 ps**
+
+![Screenshot 2024-09-12 221423](https://github.com/user-attachments/assets/8c81ccde-6a80-4ff0-9026-95a8b1569cf2)
+
+
+![Screenshot 2024-09-12 221436](https://github.com/user-attachments/assets/9ef7d42a-f530-4f0c-aee7-c197181fc4c6)
+**Fall Cell Delay**
+```
+Fall Cell Delay= 4.05343-4.05354=-0.00011 ns
+```
+Which can be converted to picoseconds (ps):
+```
+-0.00011 ns =-00.11 ps
+```
+Thus, the Fall cell delay is **-00.11 ps**
 
  # Day Four
  
