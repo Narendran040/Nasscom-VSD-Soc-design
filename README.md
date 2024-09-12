@@ -837,13 +837,43 @@ magic -T sky130A.tech sky130_inv.mag &
 
 # Spice extraction
 
+
+
+---
+
+### 1. **Check Current Directory**
+```bash
+pwd
 ```
+
+---
+
+### 2. **Extract to `.ext` Format**
+```bash
 extract all
-ext2spice cthresh 0 rethresh 
+```
+
+---
+
+### 3. **Enable Parasitic Extraction**
+```bash
+ext2spice cthresh 0 rthresh 0
+```
+
+---
+
+### 4. **Convert to SPICE Format**
+```bash
 ext2spice
 ```
-![sp](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/23ab1a2f-23c9-486e-bd2b-500aa142e819)
 
+---
+![Screenshot 2024-09-11 221959](https://github.com/user-attachments/assets/4a167ef3-a416-4eb4-a033-0d252c5d6190)
+
+![Screenshot 2024-09-11 222022](https://github.com/user-attachments/assets/f29af110-bbc4-4d30-af15-ec6ba4185cd9)
+
+
+![Screenshot 2024-09-11 222126](https://github.com/user-attachments/assets/8778f590-2112-479d-8bf3-bfbe79f55177)
 
 
 
