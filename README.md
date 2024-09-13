@@ -1007,7 +1007,9 @@ magic -d XR &
 
 ![Screenshot 2024-09-13 142017](https://github.com/user-attachments/assets/ca470c6b-c5ee-48fe-9516-affd9a714a81)
 
-![Screenshot 2024-09-13 142017](https://github.com/user-attachments/assets/8d47cf7d-1eac-4cd1-81b3-7fbbfc040ac6)
+*These rules can be found in the Google-SkyWater documentation.*
+![Screenshot 2024-09-13 142240](https://github.com/user-attachments/assets/5b6ff33d-36d6-4a52-b8dc-df8ad9e85919)
+
 
 
 
@@ -1016,7 +1018,7 @@ magic -d XR &
  
 
  
-  A requirement for ports as specified in tracks.info is that they should be at the intersection of horizontal and vertical tracks. The CMOS Inverter ports A and Y are on the li1 layer. It needs to be ensured that they're on the intersection of horizontal and vertical tracks. We access the tracks.info 
+  A requirement for ports as specified in tracks.info is that they should be at the intersection of horizontal and vertical tracks. The CMOS Inverter ports A and Y are on the li1 layer. It must be ensured that they're on the intersection of horizontal and vertical tracks. We access the tracks.info 
   
   ```
   vim tracks.info
