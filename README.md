@@ -960,6 +960,58 @@ Which can be converted to picoseconds (ps):
 ```
 Thus, the Fall cell delay is **-00.11 ps**
 
+# Lab introduction to Magic tool options and DRC rules
+
+*Google_Skywaters Design Rules*: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
+
+```bash
+# Step 1: Change to the home directory
+cd
+
+# Step 2: Download the lab files
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+
+# Step 3: Extract the compressed lab files
+tar xfz drc_tests.tgz
+
+# Step 4: Change directory into the lab folder
+cd drc_tests
+
+# Step 5: List all files and directories with detailed information
+ls -al
+
+# Step 6: View the .magicrc file using gvim
+gvim .magicrc
+
+# Step 7: Open Magic tool with better graphics (using XR display)
+magic -d XR &
+```
+![Screenshot 2024-09-13 141647](https://github.com/user-attachments/assets/51fbbe72-f7f2-4bd9-9bc0-aa5b9be59e6c)
+
+![Screenshot 2024-09-13 141726](https://github.com/user-attachments/assets/661bfa84-40ff-4424-a568-e7a4071876ae)
+
+
+![Screenshot 2024-09-13 141713](https://github.com/user-attachments/assets/a6098ea0-14cf-4397-bfc2-9154602c0c14)
+
+![Screenshot 2024-09-13 141746](https://github.com/user-attachments/assets/99a984ce-39c6-4228-a4e3-f23dce42654e)
+
+![Screenshot 2024-09-13 141800](https://github.com/user-attachments/assets/40b8d89d-da5e-48fe-b9c3-3364dc3dd7e8)
+
+
+
+![Screenshot 2024-09-13 141813](https://github.com/user-attachments/assets/d65158ca-c6ca-44f4-bc84-74c36057b8a8)
+
+
+
+![Screenshot 2024-09-13 141904](https://github.com/user-attachments/assets/7aed06eb-a581-49ba-8f58-0b9d04f77d8c)
+
+![Screenshot 2024-09-13 142017](https://github.com/user-attachments/assets/ca470c6b-c5ee-48fe-9516-affd9a714a81)
+
+![Screenshot 2024-09-13 142017](https://github.com/user-attachments/assets/8d47cf7d-1eac-4cd1-81b3-7fbbfc040ac6)
+
+
+
+
  # Day Four
  
 
