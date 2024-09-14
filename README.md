@@ -1296,7 +1296,7 @@ Note the current design values generated before modifying parameters to improve 
 
 ```bash
 # Prep design to update variables with a custom tag and overwrite the previous setup
-prep -design picorv32a -tag 24-03_10-03 -overwrite
+prep -design picorv32a -tag 09-09_06-53 -overwrite
 
 # Additional commands to include newly added LEF files into OpenLANE flow
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
