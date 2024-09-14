@@ -1170,7 +1170,7 @@ Here's a brief explanation:
 ![Screenshot 2024-09-14 185409](https://github.com/user-attachments/assets/e5335a83-f433-404e-a1f6-78e717a09b49)
 
 
- # LEF extraction can be carried out in tkcon:
+ **LEF extraction can be carried out in tkcon:**
  
  Command for tkcon window to write lef
 
@@ -1180,51 +1180,213 @@ lef write
 ```
 ![Screenshot 2024-09-14 185801](https://github.com/user-attachments/assets/db42c4e6-cfa7-4527-a5a6-775bf1ce22ec)
 
+ *Newly created lef file*
+ 
+![Screenshot 2024-09-14 191303](https://github.com/user-attachments/assets/29bbb0da-0aa2-457b-8dca-62cb0b1afa3f)
 
-> Integrate the standard cell in the OpenLANE flow
+**Copying Custom LEF and Required LIB Files to `picorv32a` Design's src Directory**
 
+### Copying the LEF File:
+```bash
+# Copy the custom LEF file to the src directory of picorv32a
+cp sky130_vsdinv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
 ```
+
+### Verifying LEF File Copy:
+```bash
+# List files in the src directory to confirm the LEF file is copied
+ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+```
+
+### Copying the Required LIB Files:
+```bash
+# Copy the required LIB files to the src directory of picorv32a
+cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+```
+
+### Verifying LIB Files Copy:
+```bash
+# List files in the src directory to confirm the LIB files are copied
+ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+```
+![Screenshot 2024-09-14 193544](https://github.com/user-attachments/assets/34ad96e3-5ce2-463f-bdc9-3b15e06aeb4a)
+
+ **Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow.**
+
+### 1. **Setting the LIB Files:**
+```tcl
+# Set the path for the synthesized library (LIB_SYNTH)
+set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+
+# Set the path for the fastest library (LIB_FASTEST)
+set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+
+# Set the path for the slowest library (LIB_SLOWEST)
+set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+
+# Set the path for the typical library (LIB_TYPICAL)
+set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+```
+
+### 2. **Adding the Custom LEF File:**
+```tcl
+# Add extra LEF files, including the custom LEF
+set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+```
+
+### Final Steps:
+1. Save the `config.tcl` file with these changes.
+2. When you run the OpenLane flow, it will automatically use the modified library paths and include your custom cell's LEF file.
+
+
+
+![Screenshot 2024-09-14 201023](https://github.com/user-attachments/assets/1e134c02-2e71-411e-bd98-f8846c5f7fe8)
+
+
+
+
+
+### Invoking OpenLANE Flow, Including New LEF, and Running Synthesis for `picorv32a`
+
+```bash
+# Change directory to openlane flow directory
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Alias for Docker OpenLANE invocation
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+
+# Invoke Docker (using the alias)
+docker
+
+# Enter the OpenLANE flow in interactive mode
 ./flow.tcl -interactive
+
+# Load OpenLANE package
 package require openlane 0.9
-prep -design picorv32 -tag RUN_2024.05.18_15.54.24 -overwrite
+
+# Prepare the design files for 'picorv32a'
+prep -design picorv32a
+
+# Additional commands to include newly added LEF to OpenLANE flow
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
+
+# Run synthesis for the design
 run_synthesis
 ```
 
-![D4 8](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/0dc8b8c5-3c31-4260-a318-6c12f5c1dfeb)
+![Screenshot 2024-09-14 201252](https://github.com/user-attachments/assets/27dff388-210c-4223-a6ad-a0c5b0adce2a)
 
+![Screenshot 2024-09-14 201411](https://github.com/user-attachments/assets/0e28690f-44ba-41aa-8c44-c1d489c0df5a)
 
-![Screenshot 2024-05-21 214025](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/bdd8de27-b1dd-43c7-b407-1a7f023961ff)
+**Reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.**
 
+Note the current design values generated before modifying parameters to improve timing.
+![Screenshot 2024-09-14 201821](https://github.com/user-attachments/assets/fa78194b-8486-4a09-8931-d660f40ff6ec)
 
-![D4 6](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/06c594b1-0c3b-48d7-a063-f9032d0e243d)
-
-
-![D4 7](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/7546a4a8-3d37-4221-ba12-1b63d78e39ec)
-
-
-
-
-
-
- # Day Five 
+ 
+![Screenshot 2024-09-14 201739](https://github.com/user-attachments/assets/a59e02fc-c34e-43f7-867e-3e6d885c8d53)
 
 
 
-  # Power Distribution Network generation
-  Power Distribution Network generation is not a part of the floorplan run in OpenLANE. PDN must be generated after CTS and post-CTS STA analyses
-  
-   ```
-  gen_pdn
-  ```
+
+### Updating Design Variables, Including Custom LEF, and Running Synthesis for `picorv32a`
 
 
-![gen_pdn](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/aae3332e-ebef-42ea-ba91-f704fa866ee3)
 
-# Routing
+```bash
+# Prep design to update variables with a custom tag and overwrite the previous setup
+prep -design picorv32a -tag 24-03_10-03 -overwrite
+
+# Additional commands to include newly added LEF files into OpenLANE flow
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Display the current value of the SYNTH_STRATEGY variable
+echo $::env(SYNTH_STRATEGY)
+
+# Set a new value for the SYNTH_STRATEGY variable
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+# Display the current value of the SYNTH_BUFFERING variable to check whether it's enabled
+echo $::env(SYNTH_BUFFERING)
+
+# Display the current value of the SYNTH_SIZING variable
+echo $::env(SYNTH_SIZING)
+
+# Set a new value for the SYNTH_SIZING variable
+set ::env(SYNTH_SIZING) 1
+
+# Display the current value of the SYNTH_DRIVING_CELL variable to check if it's the proper cell
+echo $::env(SYNTH_DRIVING_CELL)
+
+# Now that the design is prepped and ready, run synthesis using the following command
+run_synthesis
+``` 
+
+![Screenshot 2024-09-14 202728](https://github.com/user-attachments/assets/c5444d99-cc48-4855-9ea3-505a2b192b2f)
+
+![Screenshot 2024-09-14 202834](https://github.com/user-attachments/assets/df9aa502-c7d6-4bd0-8225-966a5d439cc1)
 
 
-   
- </details>
-</details>
+![Screenshot 2024-09-14 203121](https://github.com/user-attachments/assets/9b3b4596-7d8d-480c-92bf-2961db9ce1ba)
+
+![Screenshot 2024-09-14 203209](https://github.com/user-attachments/assets/cdf6c8e6-c099-4438-9d91-2a21625755b3)
+
+
+![Screenshot 2024-09-14 203237](https://github.com/user-attachments/assets/a13d36f0-3c6d-42d7-83f7-1ed12edf896e)
+
+
+![Screenshot 2024-09-14 203245](https://github.com/user-attachments/assets/9452a276-b8e9-4c31-928d-e33e80976fe1)
+
+### Running Floorplan After Synthesis Acceptance of Custom Inverter
+
+
+
+```bash
+# Now we can run the floorplan
+run_floorplan
+``` 
+
+![Screenshot 2024-09-14 203459](https://github.com/user-attachments/assets/11e276d4-1cbe-4b18-bee7-6e098c1a26cf)
+
+If you encounter errors with the `run_floorplan` command,  use the individual commands from the `floorplan.tcl` script to diagnose and address the issues. Here are the commands to run sequentially based on the information provided:
+
+```bash
+# Initialize the floorplan setup
+init_floorplan
+
+# Place the input/output (IO) pins
+place_io
+
+# Apply tap and decap to the floorplan
+tap_decap_or
+```
+
+
+![Screenshot 2024-09-14 203549](https://github.com/user-attachments/assets/a390dccf-ae4b-414b-9984-4f64592c98ef)
+
+![Screenshot 2024-09-14 203717](https://github.com/user-attachments/assets/8eb226b9-b6ff-48d2-8e15-b89e0784cafa)
+
+
+![Screenshot 2024-09-14 203741](https://github.com/user-attachments/assets/cf28e9e9-d3d2-47e3-9d0f-f4303f6da225)
+
+Here is the command to run placement after completing the floorplan:
+
+```bash
+# Now we are ready to run placement
+run_placement
+```
+
+
+![Screenshot 2024-09-14 203829](https://github.com/user-attachments/assets/f9932344-e336-4568-9419-482fc34ef4d7)
+
+
+![Screenshot 2024-09-14 203958](https://github.com/user-attachments/assets/35dc6ba2-6302-480b-8b77-2fa8dde853ce)
+
+
+
+
+
+
+
