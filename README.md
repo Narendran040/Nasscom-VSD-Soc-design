@@ -1080,22 +1080,52 @@ The error can be seen on the site.
  
   A requirement for ports as specified in tracks.info is that they should be at the intersection of horizontal and vertical tracks. The CMOS Inverter ports A and Y are on the li1 layer. It must be ensured that they're on the intersection of horizontal and vertical tracks. We access the tracks.info 
   
-  ```
-  vim tracks.info
-  ```
 
-  ![vim](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/42420742-084e-4fc6-921f-e8eed7e5b8aa)
 
-  > Grid spacing using Magic
+1. **Change Directory:**
+   ```bash
+   cd Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+   ```
+ 
+
+2. **Open Custom Inverter Layout in Magic:**
+   ```bash
+   magic -T sky130A.tech sky130_inv.mag &
+   ```
+   
+
+
+![Screenshot 2024-09-14 152906](https://github.com/user-attachments/assets/7d739ad4-8755-48f6-815a-f68274db45a9)
+
+  
+  
 
 
   To ensure that ports lie on the intersection point, the grid spacing in Magic (tkcon) must be changed to the li1 X and li1 Y values. Convergence of grid and tracks can be achieved using the following command:
   
-  ```
-  grid 0.46um 0.34um 0.23um 0.17um
-  ```
+ To set the grid values in Magic, you can use the `grid` command. :
 
-![Screenshot 2024-05-21 201420](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/53c130bd-1b86-412f-ab3d-7e8fa47429c3)
+1. **Get Syntax for Grid Command:**
+   ```bash
+   help grid
+   ```
+   This command will show you the syntax and options available for the `grid` command in Magic.
+
+2. **Set Grid Values:**
+   ```bash
+   grid 0.46um 0.34um 0.23um 0.17um
+   ```
+   This command sets the grid values as follows:
+   - **0.46um**: X-grid spacing (main grid)
+   - **0.34um**: Y-grid spacing (main grid)
+   - **0.23um**: X-grid spacing (minor grid)
+   - **0.17um**: Y-grid spacing (minor grid)
+
+![Screenshot 2024-09-14 154445](https://github.com/user-attachments/assets/31dabf33-1d8a-4d88-b0a9-d3f0af97fea5)
+
+![Screenshot 2024-09-14 154823](https://github.com/user-attachments/assets/306b933a-6991-4e1c-8da8-02553f6b2861)
+
+
 
 > Create port definition
 
