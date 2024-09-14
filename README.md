@@ -1,4 +1,4 @@
-# Nasscom-VSD-Soc-design
+  # Nasscom-VSD-Soc-design
 # Open source EDA tools 
 https://github.com/kunalg123/vsdflow.git
 # OpenLane
@@ -1009,10 +1009,70 @@ magic -d XR &
 
 *These rules can be found in the Google-SkyWater documentation.*
 ![Screenshot 2024-09-13 142240](https://github.com/user-attachments/assets/5b6ff33d-36d6-4a52-b8dc-df8ad9e85919)
+ 
+ Select any layout area and check the **drc why** it is in tckon.
+
+![Screenshot 2024-09-13 152338](https://github.com/user-attachments/assets/08418a47-4dc9-4016-a881-6ed5ab689cbe)
+Next, select a blank area and hover the mouse pointer over the metal3 contact icon. Press the p button and type 'pek' in the tkcon. Then execute the command **cif see VIA2** in the tkcon tab.
 
 
+![Screenshot 2024-09-13 161146](https://github.com/user-attachments/assets/4e84f6be-5d75-4bad-ac32-c843a338546c)
+
+**Lab exercise to fix poly.9 error in Sky130 tech-file**
+
+Now, we will open the poly. mag file in the magic tool with the help of the command **load poly. mag** in the tkcon terminal.
+![Screenshot 2024-09-13 161631](https://github.com/user-attachments/assets/5f8c1e76-4f3f-4e76-a2d2-88a4764c79dc)
+![Screenshot 2024-09-13 161616](https://github.com/user-attachments/assets/648c1870-b9e5-401c-a4aa-f0640760c112)
 
 
+![Screenshot 2024-09-13 161859](https://github.com/user-attachments/assets/9430bb12-c9f9-4096-b10b-3f59671a3812)
+
+![Screenshot 2024-09-13 161919](https://github.com/user-attachments/assets/aec61f2b-ed0f-4263-8c2b-7ad2361e841d)
+
+
+![Screenshot 2024-09-13 162239](https://github.com/user-attachments/assets/0b5302e6-b728-437a-ad74-cccc29cd6890)
+![Screenshot 2024-09-14 135136](https://github.com/user-attachments/assets/2515f4da-c0e3-4856-88f1-fad6273fdc7d)
+
+![Screenshot 2024-09-14 141732](https://github.com/user-attachments/assets/3ba33e5c-dacb-4bf3-999d-926186e53f7d)
+
+To find the error, open the `sky130A.tech` file located in the `drc_tests` directory using a Linux text editor.
+![Screenshot 2024-09-14 134957](https://github.com/user-attachments/assets/ae9a8898-d30b-41af-8dc2-34e49ce45f80)
+
+Search for 'poly.9' in the `sky130A.tech` file, found in both the POLY and uhrpoly sections, and update the rules where they are incorrectly set.
+![Screenshot 2024-09-13 172122](https://github.com/user-attachments/assets/a6ffd620-6ebc-431e-acff-ae4f1b404045)
+
+![Screenshot 2024-09-13 172254](https://github.com/user-attachments/assets/120f6bec-2884-404e-b42d-951aee6d8679)
+
+ Execute the command tech `load sky130A.tech` in the tkcon terminal. Then, run the drc check as shown below.
+
+ ![Screenshot 2024-09-13 172524](https://github.com/user-attachments/assets/67bd8437-e6fb-4328-93d1-954dd3b4f122)
+
+To check for errors, copy the poly.9 model from the `poly.mag` file in the Magic window.
+![Screenshot 2024-09-14 120547](https://github.com/user-attachments/assets/d4dada4d-019b-4783-ac33-98faa462d018)
+
+To find the description of a DRC error, select the error area in the Magic window and run the command `drc why` in the tkcon terminal.
+![ScreenshoNow we will make the following changes to the `sky130A.tech` file:t 2024-09-14 120613](https://github.com/user-attachments/assets/8dd509f3-d9de-41c4-90cb-d69c0776f41d)
+
+Lab challenge exercise: describe the DRC error as a geometrical construct.
+Now we will make the following changes to the `sky130A.tech` file:
+
+![Screenshot 2024-09-14 123117](https://github.com/user-attachments/assets/37be9eaa-701a-45d2-b7b5-c40462e06629)
+
+![Screenshot 2024-09-14 122753](https://github.com/user-attachments/assets/96f7bb3f-7b9d-4040-9970-ce385f5ddcb0)
+
+To find the `nwell.6` model error, open the `nwell.mag` file in the Magic tool. In the figure, the deep nwell is shown with yellow stripes, and the nwell is shown with a dotted green pattern.
+
+![Screenshot 2024-09-14 144826](https://github.com/user-attachments/assets/16bfe3c7-320e-4bb8-876a-ce1e4949c66b)
+
+The error can be seen on the site.
+![Screenshot 2024-09-14 145719](https://github.com/user-attachments/assets/78ef8da0-b2c1-459f-a616-88934de08b72)
+
+
+2. Execute the command `drc style`.
+3. Run the command `drc(full)`.
+4. Perform the `drc check` command.
+
+![Screenshot 2024-09-14 124723](https://github.com/user-attachments/assets/befa403a-961e-480f-917f-16eb240123b9)
 
  # Day Four
  
