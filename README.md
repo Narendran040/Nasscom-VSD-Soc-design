@@ -1142,17 +1142,44 @@ The error can be seen on the site.
 
 **Height of standard cell = 2.72 µm = 0.34 µm × 8**
 
-> Create port definition
+To save and open a layout with custom names in Magic, you would use the following commands:
 
-In the Magic Layout window, first source the .mag file for the design . Then Edit >> Text which opens up a dialogue box.
+### Saving the Layout
+To save the current layout with a custom name, use the `save` command in the Tkcon window:
+
+```tcl
+save sky130_vsdinv.mag
+```
+
+This command will save the currently open layout as `sky130_vsdinv.mag`.
+
+### Opening the Layout
+To open the newly saved layout in Magic, use the `magic` command in your terminal:
+
+```bash
+magic -T sky130A.tech sky130_vsdinv.mag &
+```
+
+Here's a brief explanation:
+- `-T sky130A.tech`: Specifies the technology file to use.
+- `sky130_vsdinv.mag`: The name of the layout file you want to open.
+- `&`: Runs the command in the background, allowing you to continue using the terminal.
 
 
-![D4 1](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/4e927615-1770-4ad6-b4a2-1c822deab5be)
+*Newly saved layout*
+![Screenshot 2024-09-14 185409](https://github.com/user-attachments/assets/e5335a83-f433-404e-a1f6-78e717a09b49)
 
-> LEF extraction can be carried out in tkcon:
 
+ # LEF extraction can be carried out in tkcon:
+ 
+ Command for tkcon window to write lef
 
-![D4 3](https://github.com/Narendran040/Nasscom-VSD-Soc-design/assets/157210399/a67cdd27-f8e0-4a43-a591-b353b41f8eb1)
+**lef command**
+```
+lef write
+```
+![Screenshot 2024-09-14 185801](https://github.com/user-attachments/assets/db42c4e6-cfa7-4527-a5a6-775bf1ce22ec)
+
 
 > Integrate the standard cell in the OpenLANE flow
 
