@@ -1123,9 +1123,24 @@ The error can be seen on the site.
 
 ![Screenshot 2024-09-14 154445](https://github.com/user-attachments/assets/31dabf33-1d8a-4d88-b0a9-d3f0af97fea5)
 
+**Condition 1 verified**
+
 ![Screenshot 2024-09-14 154823](https://github.com/user-attachments/assets/306b933a-6991-4e1c-8da8-02553f6b2861)
 
+**Condition 2 verified**
 
+**Horizontal track pitch = 0.46 µm**
+![Screenshot 2024-09-14 182718](https://github.com/user-attachments/assets/31c28f8f-66b7-4e54-be10-75252c765d32)
+
+**Width of standard cell = 1.38 µm = 0.46 µm × 3**
+
+**Condition 3 verified**
+
+**Vertical track pitch = 0.34 µm**
+
+![Screenshot 2024-09-14 183006](https://github.com/user-attachments/assets/9f2c2ac8-d47f-4aea-bdf1-9a5698d58831)
+
+**Height of standard cell = 2.72 µm = 0.34 µm × 8**
 
 > Create port definition
 
