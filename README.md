@@ -1407,3 +1407,56 @@ run_placement
 ![Screenshot 2024-09-15 220306](https://github.com/user-attachments/assets/bb34f7f4-60eb-40af-b8f7-91a22dfef985)
 
 
+
+1. Change the directory to the OpenLANE flow directory:
+   ```bash
+   cd Desktop/work/tools/openlane_working_dir/openlane
+   ```
+
+2. 
+   ```bash
+   # alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+   docker
+   ```
+
+
+1. **Invoke the OpenLANE flow in interactive mode**:
+
+   ```bash
+   ./flow.tcl -interactive
+   ```
+
+2. **Load the required OpenLANE package**:
+   :
+   ```tcl
+   package require openlane 0.9
+   ```
+
+3. **Prepare the design**:
+   
+   ```tcl
+   prep -design picorv32a
+   ```
+
+4. **Include newly added LEF files**:
+  
+   ```tcl
+   set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+   add_lefs -src $lefs
+   ```
+
+5. **Set the new value for `SYNTH_SIZING`**:
+   is:
+   ```tcl
+   set ::env(SYNTH_SIZING) 1
+   ```
+
+6. **Run synthesis**:
+ 
+   ```tcl
+   run_synthesis
+   ```
+
+
+
+
