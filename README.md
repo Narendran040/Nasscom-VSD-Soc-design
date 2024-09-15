@@ -1387,6 +1387,23 @@ run_placement
 
 
 
+1. Change the directory to the location of the generated placement `.def` file:
+   ```bash
+   cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/24-03_10-03/results/placement/
+   ```
 
+2. Load the placement `.def` file in the Magic tool:
+   ```bash
+   magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+   ```
+
+![Screenshot 2024-09-14 214627](https://github.com/user-attachments/assets/0453fd4c-4a78-470e-adea-e9840cb8e578)
+
+![Screenshot 2024-09-15 220127](https://github.com/user-attachments/assets/f7562ccd-2af2-443d-91a4-5688b737dc9c)
+
+
+![Screenshot 2024-09-15 220214](https://github.com/user-attachments/assets/f8f61879-d442-4610-910d-498b4f915f1c)
+
+![Screenshot 2024-09-15 220306](https://github.com/user-attachments/assets/bb34f7f4-60eb-40af-b8f7-91a22dfef985)
 
 
