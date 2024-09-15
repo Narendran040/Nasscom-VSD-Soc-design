@@ -1389,7 +1389,7 @@ run_placement
 
 1. Change the directory to the location of the generated placement `.def` file:
    ```bash
-   cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/24-03_10-03/results/placement/
+   cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/09-09_06-53/results/placement/
    ```
 
 2. Load the placement `.def` file in the Magic tool:
