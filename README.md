@@ -1456,6 +1456,86 @@ run_placement
    ```tcl
    run_synthesis
    ```
+![Screenshot 2024-09-15 225249](https://github.com/user-attachments/assets/effd6836-ca69-484a-b3f4-48152ed090bf)
+Newly created `pre_sta.conf` for STA analysis in `openlane` directory
+![Screenshot 2024-09-16 120759](https://github.com/user-attachments/assets/b15d47e9-5e69-4737-be6a-3b41b4e6d61d)
+
+Newly created `my_base.sdc` for STA analysis in` openlane/designs/picorv32a/src` directory based on the file `openlane/scripts/base.sdc
+
+![Screenshot 2024-09-16 120712](https://github.com/user-attachments/assets/22810c78-e98f-458b-b547-262d9b1ca496)
+
+
+
+### Steps:
+
+1. **Navigate to the OpenLane Directory:**
+
+ 
+   
+   ```bash
+   cd ~/Desktop/work/tools/openlane_working_dir/openlane
+   ```
+
+2. **Run OpenSTA with the `pre_sta.conf` Script:**
+
+
+
+1. **Re-prep the design to update variables**:
+   This command preps the design again with a specific tag (`24-03_10-03`) and overwrites the existing files:
+   ```tcl
+   prep -design picorv32a -tag 09-09_06-53 -overwrite
+   ```
+
+2. **Include newly added LEF files**:
+   After prepping, include the updated LEF files (if any) into the OpenLANE flow:
+   ```tcl
+   set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+   add_lefs -src $lefs
+   ```
+
+3. **Set new values for synthesis strategy and sizing**:
+   - Set a new synthesis strategy (e.g., prioritize delay with a factor of 3):
+     ```tcl
+     set ::env(SYNTH_STRATEGY) "DELAY 3"
+     ```
+   - Set the synthesis sizing:
+     ```tcl
+     set ::env(SYNTH_SIZING) 1
+     ```
+
+4. **Run synthesis**:
+   After prepping and updating variables, rerun the synthesis:
+   ```tcl
+   run_synthesis
+   ```
+
+5. **Run floorplanning steps (init floorplan, place I/O, tap, decap)**:
+   The following commands are internally sourced when you run the `run_floorplan` command:
+   ```tcl
+   init_floorplan
+   place_io
+   tap_decap_or
+   ```
+
+6. **Run placement**:
+   After floorplanning, you can proceed with the placement:
+   ```tcl
+   run_placement
+   ```
+
+7. **Unset `LIB_CTS` environment variable if there is an error**:
+   In case you encounter an error related to clock tree synthesis (CTS), you can unset the `LIB_CTS` variable:
+   ```tcl
+   unset ::env(LIB_CTS)
+   ```
+
+8. **Run clock tree synthesis (CTS)**:
+   Finally, after placement, proceed to run CTS:
+   ```tcl
+   run_cts
+   ```
+
+
 
 
 
