@@ -1696,5 +1696,175 @@ echo $::env(CTS_CLK_BUFFER_LIST)
 
 ![Screenshot 2024-09-16 155834](https://github.com/user-attachments/assets/ffff6173-9ced-4a19-b55a-9a4efb1bb06e)
 
+### DAY FIVE
+
+**Theory**
+
+Here’s a suitable header for your commands to generate the Power Distribution Network (PDN) and explore the PDN layout using OpenLANE:
+
+---
+
+# Power Distribution Network (PDN) Generation and Layout Exploration in OpenLANE
 
 
+###  **Navigate to the OpenLane Flow Directory**:
+   
+   
+   ```bash
+   cd ~/Desktop/work/tools/openlane_working_dir/openlane
+   ```
+
+### **Run the Docker Command**:
+   Since we have aliased the Docker command with the environment setup, we can simply run the following:
+
+   ```bash
+   docker
+   ```
+
+
+
+
+
+###  Enter OpenLANE Flow Interactive Mode
+```bash
+./flow.tcl -interactive
+```
+
+
+---
+
+### Load Required OpenLANE Package
+```bash
+package require openlane 0.9
+```
+
+
+---
+
+###  Prepare the Design
+```bash
+prep -design picorv32a
+```
+
+---
+
+### Add New LEF Files
+```bash
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+```
+
+---
+
+### : Set Synthesis Strategy
+```bash
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+```
+
+
+---
+
+###  Set Synthesis Sizing
+```bash
+set ::env(SYNTH_SIZING) 1
+```
+
+
+---
+
+###  Run Synthesis
+```bash
+run_synthesis
+```
+
+---
+
+### Initialize Floorplan
+```bash
+init_floorplan
+```
+
+
+---
+
+###  Place I/O Pads
+```bash
+place_io
+```
+
+
+---
+
+###  Insert Decap and Tap Cells
+```bash
+tap_decap_or
+```
+
+
+---
+
+### Run Placement
+```bash
+run_placement
+```
+
+
+---
+
+### : Handle CTS Library Issue (Optional)
+
+```bash
+unset ::env(LIB_CTS)
+```
+
+
+---
+
+###  Run Clock Tree Synthesis (CTS)
+```bash
+run_cts
+```
+
+
+---
+
+###  Generate Power Distribution Network (PDN)
+```bash
+gen_pdn
+```
+---
+
+![Screenshot 2024-09-16 223337](https://github.com/user-attachments/assets/9a7ba036-bd7a-40d3-ac89-7fb5cd2c4218)
+
+![Screenshot 2024-09-16 223436](https://github.com/user-attachments/assets/a6a02e5b-b4cb-46aa-9efc-15644ddab22c)
+
+![Screenshot 2024-09-16 223526](https://github.com/user-attachments/assets/209845ed-361d-48a6-8fb3-9fd4e14149d3)
+
+![Screenshot 2024-09-16 223541](https://github.com/user-attachments/assets/9c4c1ee4-5c0f-4312-8f73-28039cbdbeff)
+
+![Screenshot 2024-09-16 223601](https://github.com/user-attachments/assets/d33c997c-2818-41cb-b1b4-e45c1ec3e0b9)
+
+![Screenshot 2024-09-16 223619](https://github.com/user-attachments/assets/4f3dbc44-f583-4d60-a876-2856e46c2e9e)
+
+![Screenshot 2024-09-16 223646](https://github.com/user-attachments/assets/f475d5ce-c912-4116-b91a-9e6f6f892715)
+
+![Screenshot 2024-09-16 223720](https://github.com/user-attachments/assets/19ba6b4e-ce7a-4c4b-a8fc-a8d3ea1fb294)
+
+![Screenshot 2024-09-16 223826](https://github.com/user-attachments/assets/9b727280-a259-4c0a-a230-2be6ecd609a1)
+
+![Screenshot 2024-09-16 223838](https://github.com/user-attachments/assets/80c78fde-800f-48eb-9e0f-6b90c444f017)
+
+### Commands to load PDN def in magic in another terminal
+
+### Change Directory to the PDN DEF File Location
+```bash
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/09-09_06-53/tmp/floorplan/
+```
+This command navigates to the directory where the PDN DEF (Design Exchange Format) file is located, so you can load it in the Magic tool.
+
+---
+
+###  Load PDN DEF File into Magic Tool
+```bash
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 14-pdn.def &
+```
