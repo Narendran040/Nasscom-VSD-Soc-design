@@ -1866,5 +1866,200 @@ This command navigates to the directory where the PDN DEF (Design Exchange Forma
 
 ###  Load PDN DEF File into Magic Tool
 ```bash
-magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 14-pdn.def &
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 18-pdn.def &
 ```
+![Screenshot 2024-09-17 110908](https://github.com/user-attachments/assets/f6e8473b-1543-4e2c-89ac-97cf9450bf8e)
+
+![Screenshot 2024-09-17 111448](https://github.com/user-attachments/assets/3ff2398e-6613-476d-afe1-5de0ea6dcea6)
+
+![Screenshot 2024-09-17 110927](https://github.com/user-attachments/assets/bd47fec8-e62f-42a0-b5fd-3b635ebd203d)
+
+![Screenshot 2024-09-17 110949](https://github.com/user-attachments/assets/fe78d74d-f9b6-48ac-a94d-2c1a936906d5)
+
+
+![Screenshot 2024-09-17 111011](https://github.com/user-attachments/assets/643d34ae-4a5a-4dcc-b1a8-f65ef1cdaeea)
+
+
+![Screenshot 2024-09-17 111044](https://github.com/user-attachments/assets/818d0385-26d1-4a01-a2b8-c93fbf332a50)
+
+
+![Screenshot 2024-09-17 111228](https://github.com/user-attachments/assets/7b5d1f1c-f2aa-4cbf-8a80-031c03970797)
+
+
+![Screenshot 2024-09-17 111359](https://github.com/user-attachments/assets/47d92a43-b3fb-4e9a-b000-26cfa088958a)
+
+### Perfrom detailed routing using TritonRoute and explore the routed layout.
+
+###  Check Value of 'CURRENT_DEF'
+```bash
+echo $::env(CURRENT_DEF)
+```
+
+
+---
+
+### Check Value of 'ROUTING_STRATEGY'
+```bash
+echo $::env(ROUTING_STRATEGY)
+```
+
+
+---
+
+### Perform Detailed Routing with TritonRoute
+```bash
+run_routing
+```
+![Screenshot 2024-09-17 105811](https://github.com/user-attachments/assets/fdded96f-a7b3-47cc-a0ae-653c9a204393)
+
+![Screenshot 2024-09-17 105847](https://github.com/user-attachments/assets/cab70456-8d93-47c3-855a-c6a2cf7cd8d1)
+
+![Screenshot 2024-09-17 110403](https://github.com/user-attachments/assets/5cc9dff4-ef02-4f8a-aa70-6c0bc3f00b87)
+
+
+**Commands to load routed def in magic in another terminal**
+
+```bash
+# Load the Routed DEF into Magic for Exploration
+
+# Step 1: Change directory to the path containing the routed DEF
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-09_05-07/results/routing/
+
+# Step 2: Command to load the routed DEF into Magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+```
+
+![Screenshot 2024-09-17 111812](https://github.com/user-attachments/assets/cbaa299d-0388-4587-aa71-a8a725acea7a)
+
+![Screenshot 2024-09-17 110602](https://github.com/user-attachments/assets/89f51158-629f-4422-b5ea-df13152795f6)
+
+![Screenshot 2024-09-17 110622](https://github.com/user-attachments/assets/7a12c90c-8680-46b9-8d3c-526fb0ca8ca7)
+
+![Screenshot 2024-09-17 110646](https://github.com/user-attachments/assets/273456b8-309e-49fa-bfa0-2badffcb51a4)
+
+![Screenshot 2024-09-17 112056](https://github.com/user-attachments/assets/c5e922b3-1adf-45c6-8499-06cd25a366b5)
+
+![Screenshot 2024-09-17 112014](https://github.com/user-attachments/assets/d4dee965-fe44-410f-bca8-788a99420713)
+
+
+**Fast route guide present in `openlane/designs/picorv32a/runs/17-09_05-07/tmp/routing` directory**
+
+
+![Screenshot 2024-09-17 114109](https://github.com/user-attachments/assets/bdc160b8-1e07-40d4-8e76-f30233cd7795)
+
+ **Post-Route OpenSTA timing analysis with the extracted parasitics of the route**
+
+Commands to be run in OpenLANE flow to do OpenROAD timing analysis with integrated OpenSTA in OpenROAD
+
+
+
+###  Run the OpenROAD Tool
+```bash
+openroad
+```
+
+
+---
+
+### Read the LEF File
+```bash
+read_lef /openLANE_flow/designs/picorv32a/runs/17-09_05-07/tmp/merged.lef
+```
+
+
+---
+
+###  Read the DEF File
+```bash
+read_def /openLANE_flow/designs/picorv32a/runs/17-09_05-07/results/routing/picorv32a.def
+```
+
+
+---
+
+###  Create an OpenROAD Database
+```bash
+write_db pico_route.db
+```
+
+---
+
+### Load the Created Database
+```bash
+read_db pico_route.db
+```
+
+
+---
+
+###  Read Netlist Post-CTS
+```bash
+read_verilog /openLANE_flow/designs/picorv32a/runs/17-09_05-07/results/synthesis/picorv32a.synthesis_preroute.v
+```
+
+
+---
+
+###  Read the Liberty File (Library)
+```bash
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+```
+
+
+---
+
+### Link the Design and Library
+```bash
+link_design picorv32a
+```
+
+
+---
+
+###  Read the Custom SDC File
+```bash
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+```
+
+
+---
+
+###  Set All Clocks as Propagated Clocks
+```bash
+set_propagated_clock [all_clocks]
+```
+
+
+---
+
+###  Read the SPEF File
+```bash
+read_spef /openLANE_flow/designs/picorv32a/runs/17-09_05-07/results/routing/picorv32a.spef
+```
+
+
+---
+
+###  Generate a Custom Timing Report
+```bash
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+```
+
+---
+
+###  Exit OpenROAD
+```bash
+exit
+```
+
+---
+
+![Screenshot 2024-09-17 115236](https://github.com/user-attachments/assets/855cf700-bc66-4d3d-ac95-01e9285388e5)
+
+
+![Screenshot 2024-09-17 115254](https://github.com/user-attachments/assets/d45160e2-8a59-4ef6-bb24-cc0c2d406bc3)
+
+
+![Screenshot 2024-09-17 115305](https://github.com/user-attachments/assets/99ad0f02-98ea-4eb9-845d-40865ff2c5af)
+
+
