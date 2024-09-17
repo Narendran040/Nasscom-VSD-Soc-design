@@ -1,3 +1,6 @@
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+
 # Digital VLSI SoC Design and planning Training
 
 ![Screenshot 2024-09-17 123702](https://github.com/user-attachments/assets/5bbfdc34-dc7c-4a3d-a1c4-e026fd0ca616)
