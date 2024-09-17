@@ -1,4 +1,9 @@
-  # Nasscom-VSD-Soc-design
+# Digital VLSI SoC Design and planning Training
+
+![Screenshot 2024-09-17 123702](https://github.com/user-attachments/assets/753b2a8c-0d76-46d3-9fb7-1b9f297e367a)
+
+*Two Weeks digital VLSI SoC design and planning workshop with complete RTL2GDSII flow organized by VSD in collaboration with NASSCOM.*
+
 # Open source EDA tools 
 https://github.com/kunalg123/vsdflow.git
 # OpenLane
