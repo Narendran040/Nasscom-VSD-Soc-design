@@ -1632,7 +1632,7 @@ echo $::env(CTS_CLK_BUFFER_LIST)
 echo $::env(CURRENT_DEF)
 
 # Setting def as placement def
-set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/placement/picorv32a.placement.def
+set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/09-09_06-53/results/placement/picorv32a.placement.def
 
 # Run CTS again
 run_cts
@@ -1645,10 +1645,10 @@ echo $::env(CTS_CLK_BUFFER_LIST)
 openroad
 
 # Reading LEF file
-read_lef /openLANE_flow/designs/picorv32a/runs/24-03_10-03/tmp/merged.lef
+read_lef /openLANE_flow/designs/picorv32a/runs/09-09_06-53/tmp/merged.lef
 
 # Reading DEF file
-read_def /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/cts/picorv32a.cts.def
+read_def /openLANE_flow/designs/picorv32a/runs/09-09_06-53/results/cts/picorv32a.cts.def
 
 # Creating an OpenROAD database to work with
 write_db pico_cts1.db
@@ -1657,7 +1657,7 @@ write_db pico_cts1.db
 read_db pico_cts.db
 
 # Read netlist post CTS
-read_verilog /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis_cts.v
+read_verilog /openLANE_flow/designs/picorv32a/runs/09-09_06-53/results/synthesis/picorv32a.synthesis_cts.v
 
 # Read library for design
 read_liberty $::env(LIB_SYNTH_COMPLETE)
@@ -1709,7 +1709,7 @@ echo $::env(CTS_CLK_BUFFER_LIST)
 
 **Theory**
 
-Here’s a suitable header for your commands to generate the Power Distribution Network (PDN) and explore the PDN layout using OpenLANE:
+
 
 ---
 
@@ -1867,7 +1867,7 @@ gen_pdn
 
 ### Change Directory to the PDN DEF File Location
 ```bash
-cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/09-09_06-53/tmp/floorplan/
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-09_05-07/tmp/floorplan/
 ```
 This command navigates to the directory where the PDN DEF (Design Exchange Format) file is located, so you can load it in the Magic tool.
 
@@ -1877,9 +1877,9 @@ This command navigates to the directory where the PDN DEF (Design Exchange Forma
 ```bash
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 18-pdn.def &
 ```
-![Screenshot 2024-09-17 110908](https://github.com/user-attachments/assets/f6e8473b-1543-4e2c-89ac-97cf9450bf8e)
-
 ![Screenshot 2024-09-17 111448](https://github.com/user-attachments/assets/3ff2398e-6613-476d-afe1-5de0ea6dcea6)
+
+![Screenshot 2024-09-17 110908](https://github.com/user-attachments/assets/f6e8473b-1543-4e2c-89ac-97cf9450bf8e)
 
 ![Screenshot 2024-09-17 110927](https://github.com/user-attachments/assets/bd47fec8-e62f-42a0-b5fd-3b635ebd203d)
 
